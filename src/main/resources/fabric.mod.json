@@ -1,25 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "create_blazing_gold",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Create: Blazing Hot",
+  "description": "placeholdah",
   "authors": [
-    "Me!"
+    "dudko"
   ],
   "contact": {
     "sources": "https://github.com/Fabricators-of-Create/create-fabric-addon-template"
   },
-  "license": "CC0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/create_blazing_gold/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.modid.ExampleMod"
+      "com.dudko.blazinghot.BlazingHot"
+    ],
+    "client": [
+      "com.dudko.blazinghot.BlazingHotClient"
+    ],
+    "fabric-datagen": [
+      "com.dudko.blazinghot.BlazingHotDataGenerator"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "blazinghot.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
