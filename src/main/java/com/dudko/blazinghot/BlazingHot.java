@@ -1,5 +1,9 @@
 package com.dudko.blazinghot;
 
+import com.dudko.blazinghot.registry.BlazingBlocks;
+
+import com.dudko.blazinghot.registry.BlazingFluids;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +28,8 @@ public class BlazingHot implements ModInitializer {
 	public void onInitialize() {
 		BlazingItems.setRegister();
 		BlazingTabs.setRegister();
+		BlazingBlocks.setRegister();
+		BlazingFluids.setRegister();
 		REGISTRATE.get().register();
 
 		LOGGER.info("Create addon mod [{}] is loading alongside Create [{}]!", NAME, Create.VERSION);

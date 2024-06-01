@@ -21,9 +21,12 @@ public class BlazingTabs {
 	public static final AllCreativeModeTabs.TabInfo BLAZING_HOT = register("create.blazing_hot",
 																		   () -> FabricItemGroup
 																				   .builder()
-																				   .title(Component.translatable("itemGroup.create.blazing_hot"))
+																				   .title(Component.translatable(
+																						   "itemGroup.create.blazing_hot"))
 																				   .displayItems(new BlazingHotItemsGenerator())
-																				   .icon(() -> BlazingItems.BLAZE_GOLD_INGOT.get().getDefaultInstance())
+																				   .icon(() -> BlazingItems.BLAZE_GOLD_INGOT
+																						   .get()
+																						   .getDefaultInstance())
 																				   .build());
 
 	public static void setRegister() {
@@ -41,7 +44,11 @@ public class BlazingTabs {
 
 		@Override
 		public void accept(CreativeModeTab.@NotNull ItemDisplayParameters parameters, CreativeModeTab.@NotNull Output output) {
+			output.accept(BlazingBlocks.BLAZE_GOLD_BLOCK.asStack());
 			output.accept(BlazingItems.BLAZE_GOLD_INGOT.asStack());
+			output.accept(BlazingItems.BLAZE_GOLD_NUGGET.asStack());
+			output.accept(BlazingItems.BLAZE_GOLD_SHEET.asStack());
+			output.accept(BlazingFluids.MOLTEN_GOLD.getBucket().get());
 		}
 	}
 }
