@@ -11,7 +11,7 @@
     "sources": "https://github.com/Fabricators-of-Create/create-fabric-addon-template"
   },
   "license": "MIT",
-  "icon": "assets/create_blazing_gold/icon.png",
+  "icon": "assets/create_blazing_hot/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
