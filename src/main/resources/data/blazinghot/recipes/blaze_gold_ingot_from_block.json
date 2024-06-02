@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "blazinghot:blaze_gold_block"
+    }
+  ],
+  "result": {
+    "item": "blazinghot:blaze_gold_ingot",
+    "count": 9
+  }
+}

@@ -13,13 +13,10 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.material.MapColor;
 
 public class BlazingBlocks {
 
-	private static final CreateRegistrate REGISTRATE = BlazingHot
-			.registrate()
-			.setCreativeTab(BlazingTabs.BLAZING_HOT.key());
+	private static final CreateRegistrate REGISTRATE = BlazingHot.REGISTRATE.setCreativeTab(BlazingTabs.BLAZING_HOT.key());
 
 	public static final BlockEntry<Block> BLAZE_GOLD_BLOCK = REGISTRATE
 			.block("blaze_gold_block", Block::new)

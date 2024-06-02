@@ -1,0 +1,26 @@
+{
+  "block.blazinghot.blaze_gold_block": "Block of Blaze Gold",
+  "block.blazinghot.molten_gold": "Molten Gold",
+  "block.blazinghot.molten_blaze_gold": "Molten Blaze Gold",
+
+  "item.blazinghot.molten_gold_bucket": "Molten Gold Bucket",
+  "item.blazinghot.molten_blaze_gold_bucket": "Molten Blaze Gold Bucket",
+  "item.blazinghot.blaze_gold_ingot": "Blaze Gold Ingot",
+  "item.blazinghot.blaze_gold_sheet": "Blaze Gold Sheet",
+  "item.blazinghot.blaze_gold_nugget": "Blaze Gold Nugget",
+  "item.blazinghot.blaze_gold_rod": "Blaze Gold Rod",
+  "item.blazinghot.enriched_golden_apple": "Enriched Golden Apple",
+  "item.blazinghot.nether_dust": "Nether Dust",
+
+  "itemGroup.blazinghot": "Create: Blazing Hot",
+
+  "tag.c.molten_gold": "Molten Gold",
+  "tag.c.molten_gold_buckets": "Molten Gold Buckets",
+  "tag.c.molten_blaze_gold": "Molten Blaze Gold",
+  "tag.c.molten_blaze_gold_buckets": "Molten Blaze Gold Buckets",
+  "tag.c.blaze_gold_ingots": "Blaze Gold Ingots",
+  "tag.c.blaze_gold_nuggets": "Blaze Gold Nuggets",
+  "tag.c.blaze_gold_blocks": "Blaze Gold Blocks",
+  "tag.c.blaze_gold_plates": "Blaze Gold Plates",
+  "tag.c.blaze_gold_rods": "Blaze Gold Rods"
+}

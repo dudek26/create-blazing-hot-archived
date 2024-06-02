@@ -1,0 +1,18 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "c:blaze_gold_plates"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "item": "blazinghot:blaze_gold_rod"
+    },
+    {
+      "item": "minecraft:blaze_powder",
+      "chance": 0.2
+    }
+  ]
+}

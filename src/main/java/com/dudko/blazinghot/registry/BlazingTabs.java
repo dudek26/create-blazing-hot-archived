@@ -18,11 +18,11 @@ import net.minecraft.world.item.CreativeModeTab;
 
 public class BlazingTabs {
 
-	public static final AllCreativeModeTabs.TabInfo BLAZING_HOT = register("create.blazing_hot",
+	public static final AllCreativeModeTabs.TabInfo BLAZING_HOT = register("blazinghot",
 																		   () -> FabricItemGroup
 																				   .builder()
 																				   .title(Component.translatable(
-																						   "itemGroup.create.blazing_hot"))
+																						   "itemGroup.blazinghot"))
 																				   .displayItems(new BlazingHotItemsGenerator())
 																				   .icon(() -> BlazingItems.BLAZE_GOLD_INGOT
 																						   .get()
@@ -44,11 +44,14 @@ public class BlazingTabs {
 
 		@Override
 		public void accept(CreativeModeTab.@NotNull ItemDisplayParameters parameters, CreativeModeTab.@NotNull Output output) {
+			output.accept(BlazingItems.NETHER_DUST.asStack());
 			output.accept(BlazingBlocks.BLAZE_GOLD_BLOCK.asStack());
 			output.accept(BlazingItems.BLAZE_GOLD_INGOT.asStack());
 			output.accept(BlazingItems.BLAZE_GOLD_NUGGET.asStack());
 			output.accept(BlazingItems.BLAZE_GOLD_SHEET.asStack());
+			output.accept(BlazingItems.BLAZE_GOLD_ROD.asStack());
 			output.accept(BlazingFluids.MOLTEN_GOLD.getBucket().get());
+			output.accept(BlazingFluids.MOLTEN_BLAZE_GOLD.getBucket().get());
 		}
 	}
 }

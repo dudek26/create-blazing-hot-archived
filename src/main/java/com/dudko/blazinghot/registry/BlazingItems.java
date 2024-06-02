@@ -11,12 +11,13 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 
 @SuppressWarnings("SameParameterValue")
 public class BlazingItems {
 
 	private static final CreateRegistrate REGISTRATE = BlazingHot
-			.registrate()
+			.REGISTRATE
 			.setCreativeTab(BlazingTabs.BLAZING_HOT.key());
 
 	private static ItemEntry<Item> ingredient(String name) {
@@ -39,7 +40,16 @@ public class BlazingItems {
 			BlazingTags.forgeItemTag("blaze_gold_nuggets")), BLAZE_GOLD_SHEET = taggedIngredient("blaze_gold_sheet",
 																								 BlazingTags.forgeItemTag(
 																										 "blaze_gold_plates"),
-																								 PLATES.tag);
+																								 PLATES.tag), BLAZE_GOLD_ROD = taggedIngredient(
+			"blaze_gold_rod",
+			BlazingTags.forgeItemTag("blaze_gold_rods"));
+
+	public static final ItemEntry<Item> NETHER_DUST = ingredient("nether_dust");
+
+	public static final ItemEntry<SequencedAssemblyItem> ENRICHED_GOLDEN_APPLE = REGISTRATE
+			.item("enriched_golden_apple", SequencedAssemblyItem::new)
+			.properties(p -> p.rarity(Rarity.RARE))
+			.register();
 
 
 	public static void setRegister() {
