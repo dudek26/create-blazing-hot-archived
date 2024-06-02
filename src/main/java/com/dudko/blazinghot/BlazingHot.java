@@ -45,8 +45,4 @@ public class BlazingHot implements ModInitializer {
 
 
 	}
-
-	public static CreateRegistrate registrate() {
-		return REGISTRATE;
-	}
 }
