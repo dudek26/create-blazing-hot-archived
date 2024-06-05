@@ -8,7 +8,8 @@
   "processingTime": 500,
   "results": [
     {
-      "item": "blazinghot:blaze_gold_rod"
+      "item": "blazinghot:blaze_gold_rod",
+      "count": 2
     },
     {
       "item": "minecraft:blaze_powder",

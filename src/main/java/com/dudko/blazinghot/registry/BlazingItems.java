@@ -16,9 +16,7 @@ import net.minecraft.world.item.Rarity;
 @SuppressWarnings("SameParameterValue")
 public class BlazingItems {
 
-	private static final CreateRegistrate REGISTRATE = BlazingHot
-			.REGISTRATE
-			.setCreativeTab(BlazingTabs.BLAZING_HOT.key());
+	private static final CreateRegistrate REGISTRATE = BlazingHot.REGISTRATE.setCreativeTab(BlazingTabs.BLAZING_HOT.key());
 
 	private static ItemEntry<Item> ingredient(String name) {
 		return REGISTRATE.item(name, Item::new).register();
@@ -45,6 +43,15 @@ public class BlazingItems {
 			BlazingTags.forgeItemTag("blaze_gold_rods"));
 
 	public static final ItemEntry<Item> NETHER_DUST = ingredient("nether_dust");
+
+	public static final ItemEntry<Item> NETHERRACK_DUST = taggedIngredient("netherrack_dust",
+																		   BlazingTags.forgeItemTag("netherrack_dusts")), STONE_DUST = taggedIngredient(
+			"stone_dust",
+			BlazingTags.forgeItemTag("stone_dusts")), SOUL_DUST = taggedIngredient("soul_dust",
+																				   BlazingTags.forgeItemTag(
+																						   "soul_sand_dusts"));
+
+	public static final ItemEntry<Item> NETHER_COMPOUND = ingredient("nether_compound");
 
 	public static final ItemEntry<SequencedAssemblyItem> ENRICHED_GOLDEN_APPLE = REGISTRATE
 			.item("enriched_golden_apple", SequencedAssemblyItem::new)

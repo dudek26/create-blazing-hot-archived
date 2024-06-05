@@ -45,11 +45,15 @@ public class BlazingTabs {
 		@Override
 		public void accept(CreativeModeTab.@NotNull ItemDisplayParameters parameters, CreativeModeTab.@NotNull Output output) {
 			output.accept(BlazingItems.NETHER_DUST.asStack());
+			output.accept(BlazingItems.NETHER_COMPOUND.asStack());
 			output.accept(BlazingBlocks.BLAZE_GOLD_BLOCK.asStack());
 			output.accept(BlazingItems.BLAZE_GOLD_INGOT.asStack());
 			output.accept(BlazingItems.BLAZE_GOLD_NUGGET.asStack());
 			output.accept(BlazingItems.BLAZE_GOLD_SHEET.asStack());
 			output.accept(BlazingItems.BLAZE_GOLD_ROD.asStack());
+			output.accept(BlazingItems.STONE_DUST);
+			output.accept(BlazingItems.SOUL_DUST);
+			output.accept(BlazingItems.NETHERRACK_DUST);
 			output.accept(BlazingFluids.MOLTEN_GOLD.getBucket().get());
 			output.accept(BlazingFluids.MOLTEN_BLAZE_GOLD.getBucket().get());
 		}

@@ -11,6 +11,10 @@
   "item.blazinghot.blaze_gold_rod": "Blaze Gold Rod",
   "item.blazinghot.enriched_golden_apple": "Enriched Golden Apple",
   "item.blazinghot.nether_dust": "Nether Dust",
+  "item.blazinghot.netherrack_dust": "Netherrack Dust",
+  "item.blazinghot.soul_dust": "Soul Dust",
+  "item.blazinghot.stone_dust": "Stone Dust",
+  "item.blazinghot.nether_compound": "Nether Compound",
 
   "itemGroup.blazinghot": "Create: Blazing Hot",
 
@@ -22,5 +26,10 @@
   "tag.c.blaze_gold_nuggets": "Blaze Gold Nuggets",
   "tag.c.blaze_gold_blocks": "Blaze Gold Blocks",
   "tag.c.blaze_gold_plates": "Blaze Gold Plates",
-  "tag.c.blaze_gold_rods": "Blaze Gold Rods"
+  "tag.c.blaze_gold_rods": "Blaze Gold Rods",
+  "tag.c.netherrack_dusts": "Netherrack Dusts",
+  "tag.c.soul_sand_dusts": "Soul Sand Dusts",
+  "tag.c.stone_dusts": "Stone Dusts",
+
+  "tag.blazinghot.nether_flora": "Nether Flora"
 }
