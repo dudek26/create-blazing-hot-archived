@@ -2,6 +2,10 @@
   "block.blazinghot.blaze_gold_block": "Block of Blaze Gold",
   "block.blazinghot.molten_gold": "Molten Gold",
   "block.blazinghot.molten_blaze_gold": "Molten Blaze Gold",
+  "block.blazinghot.modern_lamp": "Modern Lamp",
+  "block.blazinghot.modern_lamp_panel": "Modern Lamp Panel",
+  "block.blazinghot.modern_redstone_lamp": "Modern Redstone Lamp",
+  "block.blazinghot.modern_redstone_lamp_panel": "Modern Redstone Lamp Panel",
 
   "item.blazinghot.molten_gold_bucket": "Molten Gold Bucket",
   "item.blazinghot.molten_blaze_gold_bucket": "Molten Blaze Gold Bucket",
@@ -15,6 +19,8 @@
   "item.blazinghot.soul_dust": "Soul Dust",
   "item.blazinghot.stone_dust": "Stone Dust",
   "item.blazinghot.nether_compound": "Nether Compound",
+  "item.blazinghot.nether_essence": "Nether Essence",
+  "item.blazinghot.blaze_arrow": "Blaze Arrow",
 
   "itemGroup.blazinghot": "Create: Blazing Hot",
 
@@ -31,5 +37,8 @@
   "tag.c.soul_sand_dusts": "Soul Sand Dusts",
   "tag.c.stone_dusts": "Stone Dusts",
 
-  "tag.blazinghot.nether_flora": "Nether Flora"
+  "tag.blazinghot.nether_flora": "Nether Flora",
+
+  "message.blazinghot.modern_lamp.lock": "Lamp locked.",
+  "message.blazinghot.modern_lamp.unlock": "Lamp unlocked."
 }

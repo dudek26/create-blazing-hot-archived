@@ -2,16 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "ll"
   ],
   "key": {
-    "#": {
-      "item": "blazinghot:blaze_gold_ingot"
+    "l": {
+      "item": "blazinghot:modern_lamp"
     }
   },
   "result": {
-    "item": "blazinghot:blaze_gold_block"
+    "item": "blazinghot:modern_lamp_panel",
+    "count": 4
   }
 }

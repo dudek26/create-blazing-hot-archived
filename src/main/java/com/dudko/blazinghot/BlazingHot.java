@@ -1,5 +1,7 @@
 package com.dudko.blazinghot;
 
+import net.minecraft.resources.ResourceLocation;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,5 +46,9 @@ public class BlazingHot implements ModInitializer {
 												 () -> () -> "{} is accessing Porting Lib from the server!"), NAME);
 
 
+	}
+
+	public static ResourceLocation asResource(String path) {
+		return new ResourceLocation(ID, path);
 	}
 }

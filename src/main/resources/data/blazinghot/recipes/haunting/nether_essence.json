@@ -2,12 +2,12 @@
   "type": "create:haunting",
   "ingredients": [
     {
-      "item": "create:cinder_flour"
+      "item": "blazinghot:nether_compound"
     }
   ],
   "results": [
     {
-      "item": "blazinghot:nether_dust"
+      "item": "blazinghot:nether_essence"
     }
   ]
 }

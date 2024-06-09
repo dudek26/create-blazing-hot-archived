@@ -5,6 +5,7 @@ import static com.simibubi.create.AllTags.AllItemTags.CREATE_INGOTS;
 import static com.simibubi.create.AllTags.AllItemTags.PLATES;
 
 import com.dudko.blazinghot.BlazingHot;
+import com.dudko.blazinghot.item.BlazeArrowItem;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
@@ -42,8 +43,6 @@ public class BlazingItems {
 			"blaze_gold_rod",
 			BlazingTags.forgeItemTag("blaze_gold_rods"));
 
-	public static final ItemEntry<Item> NETHER_DUST = ingredient("nether_dust");
-
 	public static final ItemEntry<Item> NETHERRACK_DUST = taggedIngredient("netherrack_dust",
 																		   BlazingTags.forgeItemTag("netherrack_dusts")), STONE_DUST = taggedIngredient(
 			"stone_dust",
@@ -51,11 +50,16 @@ public class BlazingItems {
 																				   BlazingTags.forgeItemTag(
 																						   "soul_sand_dusts"));
 
-	public static final ItemEntry<Item> NETHER_COMPOUND = ingredient("nether_compound");
+	public static final ItemEntry<Item> NETHER_COMPOUND = ingredient("nether_compound"), NETHER_ESSENCE = ingredient(
+			"nether_essence");
 
 	public static final ItemEntry<SequencedAssemblyItem> ENRICHED_GOLDEN_APPLE = REGISTRATE
 			.item("enriched_golden_apple", SequencedAssemblyItem::new)
 			.properties(p -> p.rarity(Rarity.RARE))
+			.register();
+
+	public static final ItemEntry<BlazeArrowItem> BLAZE_ARROW = REGISTRATE
+			.item("blaze_arrow", BlazeArrowItem::new)
 			.register();
 
 

@@ -42,10 +42,15 @@ public class BlazingTabs {
 
 	public static class BlazingHotItemsGenerator implements CreativeModeTab.DisplayItemsGenerator {
 
+		@SuppressWarnings("OptionalGetWithoutIsPresent")
 		@Override
 		public void accept(CreativeModeTab.@NotNull ItemDisplayParameters parameters, CreativeModeTab.@NotNull Output output) {
-			output.accept(BlazingItems.NETHER_DUST.asStack());
+			output.accept(BlazingBlocks.MODERN_LAMP.asStack());
+			output.accept(BlazingBlocks.MODERN_REDSTONE_LAMP.asStack());
+			output.accept(BlazingBlocks.MODERN_LAMP_PANEL.asStack());
+			output.accept(BlazingBlocks.MODERN_REDSTONE_LAMP_PANEL.asStack());
 			output.accept(BlazingItems.NETHER_COMPOUND.asStack());
+			output.accept(BlazingItems.NETHER_ESSENCE.asStack());
 			output.accept(BlazingBlocks.BLAZE_GOLD_BLOCK.asStack());
 			output.accept(BlazingItems.BLAZE_GOLD_INGOT.asStack());
 			output.accept(BlazingItems.BLAZE_GOLD_NUGGET.asStack());
@@ -56,6 +61,7 @@ public class BlazingTabs {
 			output.accept(BlazingItems.NETHERRACK_DUST);
 			output.accept(BlazingFluids.MOLTEN_GOLD.getBucket().get());
 			output.accept(BlazingFluids.MOLTEN_BLAZE_GOLD.getBucket().get());
+			output.accept(BlazingItems.BLAZE_ARROW.asStack());
 		}
 	}
 }
