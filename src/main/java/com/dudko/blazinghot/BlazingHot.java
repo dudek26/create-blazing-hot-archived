@@ -1,5 +1,7 @@
 package com.dudko.blazinghot;
 
+import com.dudko.blazinghot.registry.BlazingEntityTypes;
+
 import net.minecraft.resources.ResourceLocation;
 
 import org.slf4j.Logger;
@@ -39,6 +41,7 @@ public class BlazingHot implements ModInitializer {
 		BlazingBlocks.setRegister();
 		BlazingFluids.setRegister();
 		BlazingFluids.registerFluidInteractions();
+		BlazingEntityTypes.register();
 		REGISTRATE.register();
 
 		LOGGER.info("Create addon mod [{}] is loading alongside Create [{}]!", NAME, Create.VERSION);

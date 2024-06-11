@@ -22,6 +22,8 @@
   "item.blazinghot.nether_essence": "Nether Essence",
   "item.blazinghot.blaze_arrow": "Blaze Arrow",
 
+  "entity.blazinghot.blaze_arrow": "Blaze Arrow",
+
   "itemGroup.blazinghot": "Create: Blazing Hot",
 
   "tag.c.molten_gold": "Molten Gold",
