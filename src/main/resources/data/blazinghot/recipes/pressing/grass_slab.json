@@ -1,0 +1,14 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "minecraft:grass_block"
+    }
+  ],
+  "results": [
+    {
+      "item": "blazinghot:grass_slab",
+      "count": 2
+    }
+  ]
+}
