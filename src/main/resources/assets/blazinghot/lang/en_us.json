@@ -6,6 +6,7 @@
   "block.blazinghot.modern_lamp_panel": "Modern Lamp Panel",
   "block.blazinghot.modern_redstone_lamp": "Modern Redstone Lamp",
   "block.blazinghot.modern_redstone_lamp_panel": "Modern Redstone Lamp Panel",
+  "block.blazinghot.grass_slab": "Rail Grass Slab",
 
   "item.blazinghot.molten_gold_bucket": "Molten Gold Bucket",
   "item.blazinghot.molten_blaze_gold_bucket": "Molten Blaze Gold Bucket",
@@ -21,6 +22,8 @@
   "item.blazinghot.nether_compound": "Nether Compound",
   "item.blazinghot.nether_essence": "Nether Essence",
   "item.blazinghot.blaze_arrow": "Blaze Arrow",
+  "item.blazinghot.blaze_arrow.tooltip": "BLAZE ARROW",
+  "item.blazinghot.blaze_arrow.tooltip.summary": "Deals _extra damage_ when hitting a target in _the Nether_ dimension",
 
   "entity.blazinghot.blaze_arrow": "Blaze Arrow",
 

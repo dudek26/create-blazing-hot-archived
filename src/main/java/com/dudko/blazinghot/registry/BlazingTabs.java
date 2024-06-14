@@ -45,6 +45,7 @@ public class BlazingTabs {
 		@SuppressWarnings("OptionalGetWithoutIsPresent")
 		@Override
 		public void accept(CreativeModeTab.@NotNull ItemDisplayParameters parameters, CreativeModeTab.@NotNull Output output) {
+			output.accept(BlazingBlocks.GRASS_SLAB.asStack());
 			output.accept(BlazingBlocks.MODERN_LAMP.asStack());
 			output.accept(BlazingBlocks.MODERN_REDSTONE_LAMP.asStack());
 			output.accept(BlazingBlocks.MODERN_LAMP_PANEL.asStack());

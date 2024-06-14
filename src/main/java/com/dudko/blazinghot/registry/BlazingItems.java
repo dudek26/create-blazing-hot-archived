@@ -8,8 +8,13 @@ import com.dudko.blazinghot.BlazingHot;
 import com.dudko.blazinghot.item.BlazeArrowItem;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.foundation.item.ItemDescription;
 import com.tterrag.registrate.util.entry.ItemEntry;
 
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -60,6 +65,7 @@ public class BlazingItems {
 
 	public static final ItemEntry<BlazeArrowItem> BLAZE_ARROW = REGISTRATE
 			.item("blaze_arrow", BlazeArrowItem::new)
+			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.blaze_arrow"))
 			.register();
 
 

@@ -15,10 +15,12 @@ import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 
 import io.github.fabricators_of_create.porting_lib.tags.Tags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 
 public class BlazingBlocks {
@@ -80,6 +82,13 @@ public class BlazingBlocks {
 				String name = c.getName() + (powered ? "_powered" : "");
 				return p.models().cubeAll(name, p.modLoc("block/" + name));
 			}))
+			.simpleItem()
+			.register();
+
+	public static final BlockEntry<SlabBlock> GRASS_SLAB = REGISTRATE
+			.block("grass_slab", SlabBlock::new)
+			.initialProperties(() -> Blocks.GRASS_BLOCK)
+			.blockstate((c, p) -> p.slabBlock(c.get(), new ResourceLocation("block/grass_block"), new ResourceLocation("block/grass")))
 			.simpleItem()
 			.register();
 

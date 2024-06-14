@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blazinghot:block/grass_slab"
+    },
+    "type=double": {
+      "model": "blazinghot:block/grass_block"
+    },
+    "type=top": {
+      "model": "blazinghot:block/grass_slab_top"
+    }
+  }
+}
