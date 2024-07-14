@@ -48,5 +48,4 @@ public class BlazeArrowEntity extends AbstractArrow {
 		return builder.dimensions(EntityDimensions.fixed(0.25f, 0.25f));
 	}
 
-
 }

@@ -28,6 +28,4 @@ public class BlazeArrowItem extends ArrowItem {
 
 		return arrow;
 	}
-
-
 }
