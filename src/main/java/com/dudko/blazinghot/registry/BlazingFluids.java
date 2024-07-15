@@ -43,7 +43,7 @@ public class BlazingFluids {
 			.standardFluid("molten_gold")
 			.lang("Molten Gold")
 			.tag(BlazingTags.forgeFluidTag("molten_gold"), FluidTags.LAVA) // fabric: lava tag controls physics
-			.fluidProperties(p -> p.levelDecreasePerBlock(2).tickRate(5).flowSpeed(3).blastResistance(100f))
+			.fluidProperties(p -> p.levelDecreasePerBlock(2).tickRate(10).flowSpeed(3).blastResistance(100f))
 			.fluidAttributes(() -> new CreateAttributeHandler("block.blazinghot.molten_gold", 1500, 1400))
 			.block()
 			.properties(p -> p.lightLevel(s -> 15))
@@ -69,7 +69,7 @@ public class BlazingFluids {
 			.standardFluid("molten_blaze_gold")
 			.lang("Molten Blaze Gold")
 			.tag(BlazingTags.forgeFluidTag("molten_blaze_gold"), FluidTags.LAVA) // fabric: lava tag controls physics
-			.fluidProperties(p -> p.levelDecreasePerBlock(2).tickRate(10).flowSpeed(3).blastResistance(100f))
+			.fluidProperties(p -> p.levelDecreasePerBlock(2).tickRate(30).flowSpeed(3).blastResistance(100f))
 			.fluidAttributes(() -> new CreateAttributeHandler("block.blazinghot.molten_blaze_gold", 1500, 1400))
 			.block()
 			.properties(p -> p.lightLevel(s -> 15))

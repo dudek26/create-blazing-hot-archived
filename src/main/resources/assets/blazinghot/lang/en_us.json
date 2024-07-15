@@ -45,5 +45,7 @@
   "tag.blazinghot.nether_flora": "Nether Flora",
 
   "message.blazinghot.modern_lamp.lock": "Lamp locked.",
-  "message.blazinghot.modern_lamp.unlock": "Lamp unlocked."
+  "message.blazinghot.modern_lamp.unlock": "Lamp unlocked.",
+  
+  "emi.blazinghot.info.molten_gold_cobblestone": "You can build faster Cobblestone generators when using Molten Gold instead of Lava."
 }
