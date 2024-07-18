@@ -7,9 +7,6 @@
   "authors": [
     "dudko"
   ],
-  "contact": {
-    "sources": "https://github.com/Fabricators-of-Create/create-fabric-addon-template"
-  },
   "license": "MIT",
   "icon": "assets/blazinghot/icon.png",
   "environment": "*",
