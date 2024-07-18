@@ -4,10 +4,9 @@ package com.dudko.blazinghot.registry;
 import static com.simibubi.create.AllTags.AllItemTags.CREATE_INGOTS;
 import static com.simibubi.create.AllTags.AllItemTags.PLATES;
 
-import java.util.List;
-
 import com.dudko.blazinghot.BlazingHot;
 import com.dudko.blazinghot.item.BlazeArrowItem;
+import com.dudko.blazinghot.item.BlazeCarrotItem;
 import com.dudko.blazinghot.item.Foods;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -30,6 +29,17 @@ public class BlazingItems {
 
 	private static ItemEntry<SequencedAssemblyItem> sequencedIngredient(String name) {
 		return REGISTRATE.item(name, SequencedAssemblyItem::new).register();
+	}
+
+	private static ItemEntry<Item> food(String name, Foods food, Rarity rarity) {
+		return REGISTRATE
+				.item(name, Item::new)
+				.properties(p -> p.rarity(rarity).food(food.foodProperties))
+				.register();
+	}
+
+	private static ItemEntry<Item> food(String name, Foods food) {
+		return food(name, food, Rarity.COMMON);
 	}
 
 	@SafeVarargs
@@ -58,27 +68,23 @@ public class BlazingItems {
 	public static final ItemEntry<Item> NETHER_COMPOUND = ingredient("nether_compound"), NETHER_ESSENCE = ingredient(
 			"nether_essence");
 
-	public static final ItemEntry<Item> BLAZE_CARROT = REGISTRATE
-			.item("blaze_carrot", Item::new)
-			.properties(p -> p.food(Foods.BLAZE_CARROT.buildProperties()))
+	public static final ItemEntry<BlazeCarrotItem> BLAZE_CARROT = REGISTRATE
+			.item("blaze_carrot", BlazeCarrotItem::new)
+			.properties(p -> p.food(Foods.BLAZE_CARROT.foodProperties))
+			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.blaze_carrot"))
 			.register();
 
-	public static final ItemEntry<Item> STELLAR_GOLDEN_APPLE = REGISTRATE
-			.item("stellar_golden_apple", Item::new)
-			.properties(p -> p.rarity(Rarity.RARE).food(Foods.STELLAR_GOLDEN_APPLE.buildProperties()))
-			.register();
+	public static final ItemEntry<Item> STELLAR_GOLDEN_APPLE = food("stellar_golden_apple", Foods.STELLAR_GOLDEN_APPLE, Rarity.RARE);
 
 	public static final ItemEntry<SequencedAssemblyItem> GILDED_STELLAR_GOLDEN_APPLE = REGISTRATE
 			.item("gilded_stellar_golden_apple", SequencedAssemblyItem::new)
-			.properties(p -> p.rarity(Rarity.EPIC))
+			.properties(p -> p.rarity(Rarity.RARE))
 			.register();
 
 	public static final ItemEntry<BlazeArrowItem> BLAZE_ARROW = REGISTRATE
 			.item("blaze_arrow", BlazeArrowItem::new)
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.blaze_arrow"))
 			.register();
-
-	public static final List<Item> FOOD_ITEMS = List.of(BLAZE_CARROT.get(), STELLAR_GOLDEN_APPLE.get());
 
 	public static void setRegister() {
 		BlazingHot.LOGGER.info("Registering Mod Items for " + BlazingHot.ID);

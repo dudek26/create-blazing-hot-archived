@@ -1,11 +1,11 @@
 package com.dudko.blazinghot;
 
 import java.util.List;
+import java.util.Objects;
 
 import com.dudko.blazinghot.entity.renderer.BlazeArrowRenderer;
-import com.dudko.blazinghot.item.Foods;
 import com.dudko.blazinghot.registry.BlazingEntityTypes;
-import com.dudko.blazinghot.registry.BlazingItems;
+import com.mojang.datafixers.util.Pair;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
@@ -14,7 +14,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 
 public class BlazingHotClient implements ClientModInitializer {
 	@Override
@@ -24,27 +23,34 @@ public class BlazingHotClient implements ClientModInitializer {
 
 		ItemTooltipCallback.EVENT.register(((stack, context, lines) -> {
 
-			addEffectsTooltip(stack, lines, BlazingItems.BLAZE_CARROT.get(), Foods.BLAZE_CARROT);
-			addEffectsTooltip(stack, lines, BlazingItems.STELLAR_GOLDEN_APPLE.get(), Foods.STELLAR_GOLDEN_APPLE);
+			if (Objects.equals(stack.getItem().getCreatorModId(stack), BlazingHot.ID)) {
+				Item item = stack.getItem();
+				if (item.getFoodProperties() != null) {
+					item
+							.getFoodProperties()
+							.getEffects()
+							.stream()
+							.map(Pair::getFirst)
+							.forEach(mobEffectInstance -> addEffectTooltip(lines, mobEffectInstance));
+				}
+			}
 
 		}));
 	}
 
-	private void addEffectsTooltip(ItemStack stack, List<Component> lines, Item item, Foods food) {
-		if (stack.is(item)) {
-			for (MobEffectInstance effect : food.effects) {
-				Component amplifier = effect.getAmplifier() == 0 ?
-									  Component.empty() :
-									  Component.translatable("potion.potency." + effect.getAmplifier()).append(" ");
-				lines.add(Component
-								  .translatable(effect.getDescriptionId())
-								  .append(" ")
-								  .append(amplifier)
-								  .append("(")
-								  .append(MobEffectUtil.formatDuration(effect, 1))
-								  .append(")")
-								  .withStyle(effect.getEffect().getCategory().getTooltipFormatting()));
-			}
-		}
+	private void addEffectTooltip(List<Component> lines, MobEffectInstance effect) {
+		Component amplifier = effect.getAmplifier() == 0 ?
+							  Component.empty() :
+							  Component.translatable("potion.potency." + effect.getAmplifier()).append(" ");
+		lines.add(Component
+						  .translatable(effect.getDescriptionId())
+						  .append(" ")
+						  .append(amplifier)
+						  .append("(")
+						  .append(MobEffectUtil.formatDuration(effect, 1))
+						  .append(")")
+						  .withStyle(effect.getEffect().getCategory().getTooltipFormatting()));
+
+
 	}
 }
