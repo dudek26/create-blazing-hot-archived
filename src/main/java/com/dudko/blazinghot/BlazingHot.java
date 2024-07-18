@@ -1,13 +1,10 @@
 package com.dudko.blazinghot;
 
-import com.dudko.blazinghot.registry.BlazingEntityTypes;
-
-import net.minecraft.resources.ResourceLocation;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.dudko.blazinghot.registry.BlazingBlocks;
+import com.dudko.blazinghot.registry.BlazingEntityTypes;
 import com.dudko.blazinghot.registry.BlazingFluids;
 import com.dudko.blazinghot.registry.BlazingItems;
 import com.dudko.blazinghot.registry.BlazingTabs;
@@ -20,6 +17,7 @@ import com.simibubi.create.foundation.item.TooltipModifier;
 
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.resources.ResourceLocation;
 
 public class BlazingHot implements ModInitializer {
 	public static final String ID = "blazinghot";

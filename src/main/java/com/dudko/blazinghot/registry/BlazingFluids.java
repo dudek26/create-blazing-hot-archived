@@ -34,16 +34,14 @@ import net.minecraft.world.level.material.FluidState;
 @SuppressWarnings("UnstableApiUsage")
 public class BlazingFluids {
 
-	private static final CreateRegistrate REGISTRATE = BlazingHot
-			.REGISTRATE
-			.setCreativeTab(BlazingTabs.BLAZING_HOT.key());
+	private static final CreateRegistrate REGISTRATE = BlazingHot.REGISTRATE.setCreativeTab(BlazingTabs.BLAZING_HOT.key());
 
 
 	public static final FluidEntry<SimpleFlowableFluid.Flowing> MOLTEN_GOLD = REGISTRATE
 			.standardFluid("molten_gold")
 			.lang("Molten Gold")
 			.tag(BlazingTags.forgeFluidTag("molten_gold"), FluidTags.LAVA) // fabric: lava tag controls physics
-			.fluidProperties(p -> p.levelDecreasePerBlock(2).tickRate(10).flowSpeed(3).blastResistance(100f))
+			.fluidProperties(p -> p.levelDecreasePerBlock(2).tickRate(5).flowSpeed(3).blastResistance(100f))
 			.fluidAttributes(() -> new CreateAttributeHandler("block.blazinghot.molten_gold", 1500, 1400))
 			.block()
 			.properties(p -> p.lightLevel(s -> 15))
@@ -146,8 +144,12 @@ public class BlazingFluids {
 	@Nullable
 	public static BlockState getWaterInteraction(FluidState fluidState) {
 		Fluid fluid = fluidState.getType();
-		if (fluid.isSame(MOLTEN_GOLD.get())) return Blocks.COBBLESTONE.defaultBlockState();
-		if (fluid.isSame(MOLTEN_BLAZE_GOLD.get())) return Blocks.NETHERRACK.defaultBlockState();
+		if (fluid.isSame(MOLTEN_GOLD.get())) {
+			return Blocks.COBBLESTONE.defaultBlockState();
+		}
+		if (fluid.isSame(MOLTEN_BLAZE_GOLD.get())) {
+			return Blocks.NETHERRACK.defaultBlockState();
+		}
 		return null;
 	}
 }

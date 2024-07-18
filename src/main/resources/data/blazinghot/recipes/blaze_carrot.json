@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "nnn",
+    "ncn",
+    "nnn"
+  ],
+  "key": {
+    "n": {
+      "tag": "c:blaze_gold_nuggets"
+    },
+    "c": {
+      "item": "minecraft:carrot"
+    }
+  },
+  "result": {
+    "item": "blazinghot:blaze_carrot"
+  }
+}

@@ -14,7 +14,9 @@
   "item.blazinghot.blaze_gold_sheet": "Blaze Gold Sheet",
   "item.blazinghot.blaze_gold_nugget": "Blaze Gold Nugget",
   "item.blazinghot.blaze_gold_rod": "Blaze Gold Rod",
-  "item.blazinghot.enriched_golden_apple": "Enriched Golden Apple",
+  "item.blazinghot.blaze_carrot": "Blaze Carrot",
+  "item.blazinghot.stellar_golden_apple": "Stellar Golden Apple",
+  "item.blazinghot.gilded_stellar_golden_apple": "Gilded Stellar Golden Apple",
   "item.blazinghot.nether_dust": "Nether Dust",
   "item.blazinghot.netherrack_dust": "Netherrack Dust",
   "item.blazinghot.soul_dust": "Soul Dust",
@@ -46,6 +48,6 @@
 
   "message.blazinghot.modern_lamp.lock": "Lamp locked.",
   "message.blazinghot.modern_lamp.unlock": "Lamp unlocked.",
-  
+
   "emi.blazinghot.info.molten_gold_cobblestone": "You can build faster Cobblestone generators when using Molten Gold instead of Lava."
 }

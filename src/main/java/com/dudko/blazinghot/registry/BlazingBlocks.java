@@ -5,7 +5,6 @@ import com.dudko.blazinghot.block.ModernLampBlock;
 import com.dudko.blazinghot.block.ModernLampPanelBlock;
 import com.dudko.blazinghot.block.ModernRedstoneLampBlock;
 import com.dudko.blazinghot.block.ModernRedstoneLampPanelBlock;
-import com.ibm.icu.text.Normalizer2;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -88,7 +87,9 @@ public class BlazingBlocks {
 	public static final BlockEntry<SlabBlock> GRASS_SLAB = REGISTRATE
 			.block("grass_slab", SlabBlock::new)
 			.initialProperties(() -> Blocks.GRASS_BLOCK)
-			.blockstate((c, p) -> p.slabBlock(c.get(), new ResourceLocation("block/grass_block"), new ResourceLocation("block/grass")))
+			.blockstate((c, p) -> p.slabBlock(c.get(),
+											  new ResourceLocation("block/grass_block"),
+											  new ResourceLocation("block/grass")))
 			.simpleItem()
 			.register();
 

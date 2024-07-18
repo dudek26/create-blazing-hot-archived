@@ -1,5 +1,7 @@
 package com.dudko.blazinghot.block;
 
+import org.jetbrains.annotations.NotNull;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
@@ -8,8 +10,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-
-import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
 public class ModernRedstoneLampBlock extends Block {
@@ -29,19 +29,15 @@ public class ModernRedstoneLampBlock extends Block {
 	@Override
 	public BlockState getStateForPlacement(@NotNull BlockPlaceContext pContext) {
 		BlockState stateForPlacement = super.getStateForPlacement(pContext);
-		return stateForPlacement.setValue(LIT, pContext.getLevel()
-														   .hasNeighborSignal(pContext.getClickedPos()));
+		return stateForPlacement.setValue(LIT, pContext.getLevel().hasNeighborSignal(pContext.getClickedPos()));
 	}
 
 	@Override
-	public void neighborChanged(@NotNull BlockState pState, Level pLevel, @NotNull BlockPos pPos, @NotNull Block pBlock, @NotNull BlockPos pFromPos,
-								boolean pIsMoving) {
-		if (pLevel.isClientSide)
-			return;
+	public void neighborChanged(@NotNull BlockState pState, Level pLevel, @NotNull BlockPos pPos, @NotNull Block pBlock, @NotNull BlockPos pFromPos, boolean pIsMoving) {
+		if (pLevel.isClientSide) return;
 
 		boolean isPowered = pState.getValue(LIT);
-		if (isPowered == pLevel.hasNeighborSignal(pPos))
-			return;
+		if (isPowered == pLevel.hasNeighborSignal(pPos)) return;
 		if (isPowered) {
 			pLevel.setBlock(pPos, pState.setValue(LIT, false), 2);
 			return;
@@ -52,8 +48,6 @@ public class ModernRedstoneLampBlock extends Block {
 	}
 
 	private void scheduleActivation(Level pLevel, BlockPos pPos) {
-		if (!pLevel.getBlockTicks()
-				   .hasScheduledTick(pPos, this))
-			pLevel.scheduleTick(pPos, this, 1);
+		if (!pLevel.getBlockTicks().hasScheduledTick(pPos, this)) pLevel.scheduleTick(pPos, this, 1);
 	}
 }

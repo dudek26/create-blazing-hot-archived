@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "blazinghot:item/enriched_golden_apple"
+    "layer0": "blazinghot:item/blaze_carrot"
   }
 }

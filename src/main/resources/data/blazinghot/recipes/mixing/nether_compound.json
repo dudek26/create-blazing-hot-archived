@@ -11,7 +11,7 @@
       "tag": "blazinghot:nether_flora"
     },
     {
-      "item": "minecraft:coal"
+      "tag": "minecraft:coals"
     },
     {
       "item": "minecraft:clay_ball"
@@ -19,7 +19,8 @@
   ],
   "results": [
     {
-      "item": "blazinghot:nether_compound"
+      "item": "blazinghot:nether_compound",
+      "count": 2
     }
   ]
 }

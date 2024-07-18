@@ -10,8 +10,7 @@ import net.minecraft.world.level.material.Fluid;
 
 public class BlazingTags {
 
-	public static <T> TagKey<T> optionalTag(Registry<T> registry,
-											ResourceLocation id) {
+	public static <T> TagKey<T> optionalTag(Registry<T> registry, ResourceLocation id) {
 		return TagKey.create(registry.key(), id);
 	}
 

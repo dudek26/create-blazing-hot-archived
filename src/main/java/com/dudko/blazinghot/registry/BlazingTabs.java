@@ -62,6 +62,8 @@ public class BlazingTabs {
 			output.accept(BlazingItems.NETHERRACK_DUST);
 			output.accept(BlazingFluids.MOLTEN_GOLD.getBucket().get());
 			output.accept(BlazingFluids.MOLTEN_BLAZE_GOLD.getBucket().get());
+			output.accept(BlazingItems.BLAZE_CARROT.asStack());
+			output.accept(BlazingItems.STELLAR_GOLDEN_APPLE.asStack());
 			output.accept(BlazingItems.BLAZE_ARROW.asStack());
 		}
 	}
