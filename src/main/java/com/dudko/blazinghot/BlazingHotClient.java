@@ -33,10 +33,16 @@ public class BlazingHotClient implements ClientModInitializer {
 	private void addEffectsTooltip(ItemStack stack, List<Component> lines, Item item, Foods food) {
 		if (stack.is(item)) {
 			for (MobEffectInstance effect : food.effects) {
+				Component amplifier = effect.getAmplifier() == 0 ?
+									  Component.empty() :
+									  Component.translatable("potion.potency." + effect.getAmplifier()).append(" ");
 				lines.add(Component
-								  .translatable("potion.withDuration",
-												Component.translatable(effect.getEffect().getDescriptionId()),
-												MobEffectUtil.formatDuration(effect, 1))
+								  .translatable(effect.getDescriptionId())
+								  .append(" ")
+								  .append(amplifier)
+								  .append("(")
+								  .append(MobEffectUtil.formatDuration(effect, 1))
+								  .append(")")
 								  .withStyle(effect.getEffect().getCategory().getTooltipFormatting()));
 			}
 		}
