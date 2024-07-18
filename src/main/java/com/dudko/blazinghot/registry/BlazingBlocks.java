@@ -84,16 +84,6 @@ public class BlazingBlocks {
 			.simpleItem()
 			.register();
 
-	public static final BlockEntry<SlabBlock> GRASS_SLAB = REGISTRATE
-			.block("grass_slab", SlabBlock::new)
-			.initialProperties(() -> Blocks.GRASS_BLOCK)
-			.blockstate((c, p) -> p.slabBlock(c.get(),
-											  new ResourceLocation("block/grass_block"),
-											  new ResourceLocation("block/grass")))
-			.simpleItem()
-			.register();
-
-
 	public static void setRegister() {
 
 	}
