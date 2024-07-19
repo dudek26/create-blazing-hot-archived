@@ -10,7 +10,6 @@ public enum Foods {
 						 .alwaysEat()
 						 .nutrition(6)
 						 .saturationMod(1.2F)
-						 .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 100), 1)
 						 .build()),
 	STELLAR_GOLDEN_APPLE(new FoodProperties.Builder()
 								 .alwaysEat()
