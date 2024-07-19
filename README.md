@@ -10,8 +10,14 @@ and existing metals, most notably their liquid forms.
 ## 🔧 Features
 
 <details>
-<summary>Molten Metals</summary>
-<p>Create: Blazing Hot adds molten variants of metals to the game. Currently, only Gold and Blaze Gold have their liquid forms, but more will be added in the future.</p>
+    <summary>Molten Metals</summary>
+    <p>Create: Blazing Hot adds molten variants of metals to the game. Currently, only Gold and Blaze Gold have their liquid forms, but more will be added in the future.</p>
+    <p>There are new filling recipes using Molten Gold for Golden Carrots, Glistering Melons and Golden Apples.</p>
+    <p>Molten metals can also interact with Water:</p>
+    <ul>
+        <li>Molten Gold turns into Cobblestone, but it's way faster than Lava.</li>
+        <li>Molten Blaze Gold turns into Netherrack.</li>
+    </ul>
 </details>
 
 <details>
