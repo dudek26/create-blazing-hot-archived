@@ -38,7 +38,10 @@ and existing metals, most notably their liquid forms.
 
 <details>
     <summary>Food</summary>
-    <p>This mod adds new Apple and Carrot variants. As of v0.1, the only new variants are the Blaze Carrot mentioned earlier and the Stellar Golden Apple, which is obtained by deploying a Nether Star on an Golden Apple, and can be used to craft the Enchanted Golden Apple.<br>There are more foods planned in the future for other metals.</p>
+    <p>This mod adds new Apple and Carrot variants. As of v0.1, the only new variants are the Blaze Carrot mentioned earlier and the Stellar Golden Apple, which is obtained by deploying a Nether Star on an Golden Apple, and can be used to craft the Enchanted Golden Apple.</p>
+    <ul>
+        <li>There are more foods planned in the future for other metals.</li>
+    </ul>
 </details>
 
 There is more content planned for the future.
