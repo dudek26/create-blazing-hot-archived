@@ -9,8 +9,6 @@
   "item.blazinghot.modern_lamp.tooltip.summary": "A _modern_ lamp that can be used to _light up_ your builds, either _manually_ or by _redstone_!",
   "item.blazinghot.modern_lamp.tooltip.condition1": "When R-Clicked with Empty Hand",
   "item.blazinghot.modern_lamp.tooltip.behaviour1": "Toggles between the _on_ and _off_ state",
-  "item.blazinghot.modern_lamp.tooltip.condition2": "When Powered with Redstone",
-  "item.blazinghot.modern_lamp.tooltip.behaviour2": "_Lights up_",
-  "item.blazinghot.modern_lamp.tooltip.condition3": "When R-Clicked with Wrench",
-  "item.blazinghot.modern_lamp.tooltip.behaviour3": "_Locks_ the ability of _toggling_ the lamp _by hand_"
+  "item.blazinghot.modern_lamp.tooltip.condition2": "When R-Clicked with Wrench",
+  "item.blazinghot.modern_lamp.tooltip.behaviour2": "_Locks_ the ability of _toggling_ the lamp _by hand_"
 }
