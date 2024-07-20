@@ -3,7 +3,7 @@
   "id": "blazinghot",
   "version": "${version}",
   "name": "Create: Blazing Hot",
-  "description": "placeholdah",
+  "description": "Nether- and metal-related features and QoL recipes.",
   "authors": [
     "dudko"
   ],
@@ -27,7 +27,7 @@
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": ">=${fabric_api_version}",
-    "create": "${create_version}",
+    "create": ">=0.5.1-f-build.1417+mc1.20.1",
     "minecraft": "${minecraft_version}"
   }
 }

@@ -27,6 +27,7 @@ and existing metals, most notably their liquid forms.
         <li>Crushing Blaze Gold Rods has a chance of dropping Blaze Powder, allowing for easy automation of it.</li>
         <li>Blaze Gold Rods are also used in the crafting of Modern Lamps - a new block to light up your builds, and Blaze Arrows - a new type of arrow that deals extra damage when shot in The Nether dimension!</li>
         <li>Either Blaze Gold Nuggets or Molten Blaze Gold can be used to craft Blaze Carrots, which stop the player from burning on being eaten.</li>
+        <li>Molten Blaze Gold can be used to craft new variants of Apples, that give longer Fire Resistance effect and are more damage-focused.</li>
     </ul>
     <p>More features for Blaze Gold are planned, such as Blaze Casings and some new machinery!</p>
 </details>
@@ -38,7 +39,14 @@ and existing metals, most notably their liquid forms.
 
 <details>
     <summary>Food</summary>
-    <p>This mod adds new Apple and Carrot variants. As of v0.1, the only new variants are the Blaze Carrot mentioned earlier and the Stellar Golden Apple, which is obtained by deploying a Nether Star on an Golden Apple, and can be used to craft the Enchanted Golden Apple.</p>
+    <p>This mod adds new Apple and Carrot variants:</p>
+    <ul>
+        <li>Blaze Carrot - has the stats of a Golden Carrot, but it also extinguishes on consumption</li>
+        <li>Blaze Apple - crafted with Blaze Gold, has the effects of the Golden Apple and 5 minutes of Fire Resistance</li>
+        <li>Stellar Blaze Apple - crafted by deploying a Nether Star on a Blaze Apple and gives 8 minutes of Fire Resistance instead of 5</li>
+        <li>Enchanted Blaze Apple - crafted in Sequenced Assembly, has the effects of the Stellar Blaze Apple, but gives Absorption III instead of I and also gives Strength for 5 minutes</li>
+        <li>Stellar Golden Apple - has the stats of a Golden Apple and also gives Fire Resistance for 5 minutes; can be crafted into an Enchanted Golden Apple</li>
+    </ul>
     <ul>
         <li>There are more foods planned in the future for other metals.</li>
     </ul>
