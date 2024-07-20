@@ -1,13 +1,11 @@
 package com.dudko.blazinghot.registry;
 
 import com.dudko.blazinghot.BlazingHot;
-import com.dudko.blazinghot.block.modern_lamp.ModernLampBlock;
-import com.dudko.blazinghot.block.modern_lamp.ModernLampGenerator;
-import com.dudko.blazinghot.block.modern_lamp.ModernLampPanelBlock;
-import com.dudko.blazinghot.block.modern_lamp.ModernLampPanelGenerator;
+import com.dudko.blazinghot.content.block.modern_lamp.ModernLampBlock;
+import com.dudko.blazinghot.content.block.modern_lamp.ModernLampGenerator;
+import com.dudko.blazinghot.content.block.modern_lamp.ModernLampPanelBlock;
+import com.dudko.blazinghot.content.block.modern_lamp.ModernLampPanelGenerator;
 import com.simibubi.create.AllTags;
-import com.simibubi.create.content.redstone.RoseQuartzLampBlock;
-import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.ModelGen;
 import com.simibubi.create.foundation.item.ItemDescription;

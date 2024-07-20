@@ -1,4 +1,4 @@
-package com.dudko.blazinghot.item;
+package com.dudko.blazinghot.content.item;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;

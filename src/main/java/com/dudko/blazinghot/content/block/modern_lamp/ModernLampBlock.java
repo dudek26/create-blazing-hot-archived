@@ -1,4 +1,4 @@
-package com.dudko.blazinghot.block.modern_lamp;
+package com.dudko.blazinghot.content.block.modern_lamp;
 
 import org.jetbrains.annotations.NotNull;
 

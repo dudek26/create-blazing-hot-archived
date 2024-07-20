@@ -1,4 +1,4 @@
-package com.dudko.blazinghot.block;
+package com.dudko.blazinghot.content.block;
 
 import com.simibubi.create.AllShapes;
 

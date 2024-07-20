@@ -1,9 +1,9 @@
-package com.dudko.blazinghot.entity.renderer;
+package com.dudko.blazinghot.content.entity.renderer;
 
 import org.jetbrains.annotations.NotNull;
 
 import com.dudko.blazinghot.BlazingHot;
-import com.dudko.blazinghot.entity.BlazeArrowEntity;
+import com.dudko.blazinghot.content.entity.BlazeArrowEntity;
 
 import net.minecraft.client.renderer.entity.ArrowRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

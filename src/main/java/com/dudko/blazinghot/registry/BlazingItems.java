@@ -4,9 +4,9 @@ package com.dudko.blazinghot.registry;
 import static com.simibubi.create.AllTags.AllItemTags.PLATES;
 
 import com.dudko.blazinghot.BlazingHot;
-import com.dudko.blazinghot.item.BlazeArrowItem;
-import com.dudko.blazinghot.item.ExtinguishingItem;
-import com.dudko.blazinghot.item.Foods;
+import com.dudko.blazinghot.content.item.BlazeArrowItem;
+import com.dudko.blazinghot.content.item.ExtinguishingItem;
+import com.dudko.blazinghot.content.item.Foods;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;

@@ -1,4 +1,4 @@
-package com.dudko.blazinghot.entity;
+package com.dudko.blazinghot.content.entity;
 
 import org.jetbrains.annotations.NotNull;
 

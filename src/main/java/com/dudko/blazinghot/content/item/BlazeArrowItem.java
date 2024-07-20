@@ -1,8 +1,8 @@
-package com.dudko.blazinghot.item;
+package com.dudko.blazinghot.content.item;
 
 import org.jetbrains.annotations.NotNull;
 
-import com.dudko.blazinghot.entity.BlazeArrowEntity;
+import com.dudko.blazinghot.content.entity.BlazeArrowEntity;
 import com.dudko.blazinghot.registry.BlazingEntityTypes;
 import com.dudko.blazinghot.registry.BlazingItems;
 import com.simibubi.create.content.contraptions.ContraptionWorld;

@@ -3,7 +3,7 @@ package com.dudko.blazinghot;
 import java.util.List;
 import java.util.Objects;
 
-import com.dudko.blazinghot.entity.renderer.BlazeArrowRenderer;
+import com.dudko.blazinghot.content.entity.renderer.BlazeArrowRenderer;
 import com.dudko.blazinghot.registry.BlazingEntityTypes;
 import com.mojang.datafixers.util.Pair;
 

@@ -1,8 +1,8 @@
-package com.dudko.blazinghot.block.modern_lamp;
+package com.dudko.blazinghot.content.block.modern_lamp;
 
 import org.jetbrains.annotations.NotNull;
 
-import com.dudko.blazinghot.block.Shapes;
+import com.dudko.blazinghot.content.block.Shapes;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
