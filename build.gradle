@@ -142,6 +142,10 @@ java {
 	withSourcesJar()
 }
 
+tasks.withType(Jar).configureEach { duplicatesStrategy = DuplicatesStrategy.WARN }
+
+tasks.withType(Copy).configureEach { duplicatesStrategy = DuplicatesStrategy.WARN }
+
 jar {
 	duplicatesStrategy = DuplicatesStrategy.WARN
 

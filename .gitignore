@@ -34,4 +34,6 @@ run/
 
 # photoshop
 *.psd
+
+# datagen cache
 /src/generated/resources/.cache/
