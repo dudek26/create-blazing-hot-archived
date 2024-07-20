@@ -1,15 +1,27 @@
 {
   "variants": {
-    "lit=false,locked=false": {
+    "lit=false,locked=false,powered=false": {
       "model": "blazinghot:block/modern_lamp/white"
     },
-    "lit=false,locked=true": {
+    "lit=false,locked=false,powered=true": {
       "model": "blazinghot:block/modern_lamp/white"
     },
-    "lit=true,locked=false": {
+    "lit=false,locked=true,powered=false": {
+      "model": "blazinghot:block/modern_lamp/white"
+    },
+    "lit=false,locked=true,powered=true": {
+      "model": "blazinghot:block/modern_lamp/white"
+    },
+    "lit=true,locked=false,powered=false": {
       "model": "blazinghot:block/modern_lamp/white_powered"
     },
-    "lit=true,locked=true": {
+    "lit=true,locked=false,powered=true": {
+      "model": "blazinghot:block/modern_lamp/white_powered"
+    },
+    "lit=true,locked=true,powered=false": {
+      "model": "blazinghot:block/modern_lamp/white_powered"
+    },
+    "lit=true,locked=true,powered=true": {
       "model": "blazinghot:block/modern_lamp/white_powered"
     }
   }
