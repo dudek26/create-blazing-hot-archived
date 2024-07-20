@@ -95,6 +95,32 @@ public class BlazingItems {
 			.properties(p -> p.rarity(Rarity.RARE))
 			.register();
 
+	public static final ItemEntry<ExtinguishingItem> BLAZE_APPLE = REGISTRATE
+			.item("blaze_apple", ExtinguishingItem::new)
+			.tag(BlazingTags.ItemTags.FOODS.tag)
+			.properties(p -> p.food(Foods.BLAZE_APPLE.foodProperties).rarity(Rarity.RARE).fireResistant())
+			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.extinguishing_food"))
+			.register();
+
+	public static final ItemEntry<ExtinguishingItem> STELLAR_BLAZE_APPLE = REGISTRATE
+			.item("stellar_blaze_apple", ExtinguishingItem::new)
+			.tag(BlazingTags.ItemTags.FOODS.tag)
+			.properties(p -> p.food(Foods.STELLAR_BLAZE_APPLE.foodProperties).rarity(Rarity.RARE).fireResistant())
+			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.extinguishing_food"))
+			.register();
+
+	public static final ItemEntry<SequencedAssemblyItem> BURNING_STELLAR_BLAZE_APPLE = REGISTRATE
+			.item("burning_stellar_blaze_apple", SequencedAssemblyItem::new)
+			.properties(p -> p.rarity(Rarity.RARE))
+			.register();
+
+	public static final ItemEntry<ExtinguishingItem> ENCHANTED_BLAZE_APPLE = REGISTRATE
+			.item("enchanted_blaze_apple", p -> new ExtinguishingItem(p, true))
+			.tag(BlazingTags.ItemTags.FOODS.tag)
+			.properties(p -> p.food(Foods.ENCHANTED_BLAZE_APPLE.foodProperties).rarity(Rarity.EPIC).fireResistant())
+			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.extinguishing_food"))
+			.register();
+
 	public static final ItemEntry<BlazeArrowItem> BLAZE_ARROW = REGISTRATE
 			.item("blaze_arrow", BlazeArrowItem::new)
 			.tag(ItemTags.ARROWS)

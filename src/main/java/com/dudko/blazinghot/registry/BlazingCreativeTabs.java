@@ -61,6 +61,9 @@ public class BlazingCreativeTabs {
 			output.accept(BlazingFluids.MOLTEN_BLAZE_GOLD.getBucket().get());
 			output.accept(BlazingItems.BLAZE_CARROT.asStack());
 			output.accept(BlazingItems.STELLAR_GOLDEN_APPLE.asStack());
+			output.accept(BlazingItems.BLAZE_APPLE.asStack());
+			output.accept(BlazingItems.STELLAR_BLAZE_APPLE.asStack());
+			output.accept(BlazingItems.ENCHANTED_BLAZE_APPLE.asStack());
 			output.accept(BlazingItems.BLAZE_ARROW.asStack());
 		}
 	}

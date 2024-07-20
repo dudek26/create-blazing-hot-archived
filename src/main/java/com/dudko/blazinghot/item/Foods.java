@@ -35,7 +35,7 @@ public enum Foods {
 								  .alwaysEat()
 								  .nutrition(4)
 								  .saturationMod(1.2F)
-								  .effect(new MobEffectInstance(MobEffects.ABSORPTION, 2 * 60 * 20), 1)
+								  .effect(new MobEffectInstance(MobEffects.ABSORPTION, 2 * 60 * 20, 2), 1)
 								  .effect(new MobEffectInstance(MobEffects.REGENERATION, 10 * 20, 1), 1)
 								  .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 8 * 60 * 20), 1)
 								  .effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 5 * 60 * 20), 1)

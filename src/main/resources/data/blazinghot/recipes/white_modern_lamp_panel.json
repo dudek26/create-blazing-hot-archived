@@ -6,11 +6,11 @@
   ],
   "key": {
     "l": {
-      "item": "blazinghot:modern_lamp"
+      "item": "blazinghot:white_modern_lamp"
     }
   },
   "result": {
-    "item": "blazinghot:modern_lamp_panel",
+    "item": "blazinghot:white_modern_lamp_panel",
     "count": 4
   }
 }

@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "blazinghot:blaze_carrot",
-    "blazinghot:stellar_golden_apple"
+    "blazinghot:stellar_golden_apple",
+    "blazinghot:blaze_apple",
+    "blazinghot:stellar_blaze_apple",
+    "blazinghot:enchanted_blaze_apple"
   ]
 }

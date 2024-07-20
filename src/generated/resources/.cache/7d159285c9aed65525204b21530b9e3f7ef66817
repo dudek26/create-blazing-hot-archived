@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-20T20:00:52.5247669	Create: Blazing Hot/Registrate Provider for blazinghot [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+// 1.20.1	2024-07-20T21:00:13.9361526	Create: Blazing Hot/Registrate Provider for blazinghot [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
 673e052b0cd70bbd0dc75bbfbcf08909b245f6e5 data\minecraft\tags\entity_types\arrows.json
 166ab31406d965aa8edf422fea56c8cc35089f4a assets\blazinghot\models\item\blaze_gold_rod.json
 33ca97d55a917dd081b474542398867185ca83c1 data\minecraft\tags\fluids\lava.json
@@ -10,13 +10,16 @@ c4a11a37f2282eee1f55408fedabd7bbe6701012 assets\blazinghot\models\block\molten_b
 3ac195a1bef2c14c737c600a2a4f166f61c27694 assets\blazinghot\models\item\molten_gold_bucket.json
 2c1c204ce899f7d8afaae5f2ad8f80cd2ea53daf data\minecraft\tags\blocks\mineable\pickaxe.json
 002f89017e2163c2a170203287d8e7340d9ebb29 data\minecraft\tags\items\piglin_loved.json
+768f72a3ac19f7af98b2fddd7a7516c0ab94bd05 assets\blazinghot\models\item\stellar_blaze_apple.json
 e9faf984cd05c06b895d5f50722a634aed1145a0 data\c\tags\items\stone_dusts.json
 673e052b0cd70bbd0dc75bbfbcf08909b245f6e5 data\minecraft\tags\items\arrows.json
 f3a3e7a1cb8fa2ba81f74e841fae2fe6ce876c8a assets\blazinghot\models\block\white_modern_lamp_powered.json
+b478d175cb72ac414b43d673f915c16cc8dd034f assets\blazinghot\models\item\blaze_apple.json
 428dcee40587baec51c4f2de84c0cd45deebedfc data\c\tags\items\blaze_gold_ingots.json
 32add9266bf639b26b4b5000c9ec31f255ea9aec assets\blazinghot\models\item\blaze_carrot.json
 dd6654eef8edf1e4b42cee91244744b70abb7de9 assets\blazinghot\models\item\blaze_gold_ingot.json
 428dcee40587baec51c4f2de84c0cd45deebedfc data\minecraft\tags\items\beacon_payment_items.json
+f365f62f943ee1a6ecbb83b47e81b16592fa050c assets\blazinghot\models\item\enchanted_blaze_apple.json
 28f3f6488fbf24975269e7bc77316663667fab64 data\c\tags\items\soul_sand_dusts.json
 fa7505e8a7e0f70d39707be36843002b90faef5c assets\blazinghot\models\item\blaze_gold_nugget.json
 41243fbbd065f709bd7508b5a481172109465cc5 assets\blazinghot\models\item\molten_blaze_gold_bucket.json
@@ -35,7 +38,7 @@ cf3b7239a15b0abb68619b2442b2e75718742229 assets\blazinghot\models\block\white_mo
 96b8def5af8599991d9877548f78babcf14e5ac6 data\c\tags\items\blaze_gold_nuggets.json
 2c1c204ce899f7d8afaae5f2ad8f80cd2ea53daf data\c\tags\blocks\blaze_gold_blocks.json
 ae41d1a97fa08d2924bda1e4003afb229d2ee1aa data\c\tags\items\blaze_gold_rods.json
-22f8aacd1360343aa40d0cf788ca12093e5c992e data\c\tags\items\foods.json
+dc5863d0c4764d7fc4e916f3891a632f65f92d84 data\c\tags\items\foods.json
 9ab7a5d9be84c0218d8b2c9fd2a01a4d47577148 assets\blazinghot\models\block\molten_gold.json
 65f47c24863f5958865568093030d02112457111 assets\blazinghot\blockstates\molten_gold.json
 97a652add0f4f03604d9a5503404604374004a3c data\c\tags\fluids\molten_gold.json
@@ -43,7 +46,7 @@ ae41d1a97fa08d2924bda1e4003afb229d2ee1aa data\c\tags\items\blaze_gold_rods.json
 cb04f841b548586d0485eff5f692a8786dbffb64 assets\blazinghot\models\item\blaze_gold_sheet.json
 12c3e4e84f4d6e5d20a3074c39ffe4b05d703516 data\c\tags\items\blaze_gold_plates.json
 72ec2ca463c33959a055e4c12a12a9b33da05e35 assets\blazinghot\models\item\stellar_golden_apple.json
-8bc2e1cd8ef576c4551050b0fc08e495f4f38396 assets\blazinghot\lang\en_us.json
+327ee517188947d1b8b4a8f0625a4618e0ca9c56 assets\blazinghot\lang\en_us.json
 2c1c204ce899f7d8afaae5f2ad8f80cd2ea53daf data\minecraft\tags\blocks\beacon_base_blocks.json
 12c3e4e84f4d6e5d20a3074c39ffe4b05d703516 data\c\tags\items\plates.json
 ba857180e82efd9afa0d0868851d85f1ece2654f assets\blazinghot\models\item\white_modern_lamp.json
@@ -52,7 +55,8 @@ bf769d5c73fac2974cc405afc3079d3b58ccfd9f assets\blazinghot\blockstates\white_mod
 3b4842e1e0698979c12c216eb7726a376c53eb6c data\blazinghot\loot_tables\blocks\white_modern_lamp.json
 a280b7238012b1d028d2d67dd09bc5d6c59a40ff assets\blazinghot\models\item\blaze_arrow.json
 2c1c204ce899f7d8afaae5f2ad8f80cd2ea53daf data\c\tags\blocks\storage_blocks.json
+be575f6df2bee12b490a13a1451364ee38086d71 assets\blazinghot\models\item\burning_stellar_blaze_apple.json
 4a1e0aef49e68839cc2a962da38f92f546ad13a1 assets\blazinghot\models\item\nether_essence.json
 2c1c204ce899f7d8afaae5f2ad8f80cd2ea53daf data\c\tags\items\storage_blocks.json
 2f493dba6c0b9ec11c544b8ac3c9f73907c36ccb assets\blazinghot\models\item\stone_dust.json
-5fdb667dc1ac429d9f3616a0317ac83739b4b04b assets\blazinghot\lang\en_ud.json
+f1ccd6bcd429943753c1574940246664f945228d assets\blazinghot\lang\en_ud.json
