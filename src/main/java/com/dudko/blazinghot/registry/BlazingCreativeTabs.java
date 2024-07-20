@@ -46,9 +46,7 @@ public class BlazingCreativeTabs {
 		@Override
 		public void accept(CreativeModeTab.@NotNull ItemDisplayParameters parameters, CreativeModeTab.@NotNull Output output) {
 			output.accept(BlazingBlocks.WHITE_MODERN_LAMP.asStack());
-			output.accept(BlazingBlocks.WHITE_MODERN_REDSTONE_LAMP.asStack());
 			output.accept(BlazingBlocks.WHITE_MODERN_LAMP_PANEL.asStack());
-			output.accept(BlazingBlocks.WHITE_MODERN_REDSTONE_LAMP_PANEL.asStack());
 			output.accept(BlazingItems.NETHER_COMPOUND.asStack());
 			output.accept(BlazingItems.NETHER_ESSENCE.asStack());
 			output.accept(BlazingBlocks.BLAZE_GOLD_BLOCK.asStack());

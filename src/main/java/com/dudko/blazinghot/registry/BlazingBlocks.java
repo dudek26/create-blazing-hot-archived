@@ -5,8 +5,6 @@ import com.dudko.blazinghot.block.modern_lamp.ModernLampBlock;
 import com.dudko.blazinghot.block.modern_lamp.ModernLampGenerator;
 import com.dudko.blazinghot.block.modern_lamp.ModernLampPanelBlock;
 import com.dudko.blazinghot.block.modern_lamp.ModernLampPanelGenerator;
-import com.dudko.blazinghot.block.modern_lamp.ModernRedstoneLampBlock;
-import com.dudko.blazinghot.block.modern_lamp.ModernRedstoneLampPanelBlock;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.ModelGen;
@@ -59,31 +57,6 @@ public class BlazingBlocks {
 			.blockstate(new ModernLampPanelGenerator(DyeColor.WHITE)::generate)
 			.item()
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_lamp"))
-			.transform(ModelGen.customItemModel("modern_lamp_panel", "white"))
-			.register();
-
-	@Deprecated
-	public static final BlockEntry<ModernRedstoneLampBlock> WHITE_MODERN_REDSTONE_LAMP = REGISTRATE
-			.block("white_modern_redstone_lamp", ModernRedstoneLampBlock::new)
-			.lang("White Modern Redstone Lamp [DEPRECATED]")
-			.initialProperties(() -> Blocks.REDSTONE_LAMP)
-			.tag(AllTags.AllBlockTags.WRENCH_PICKUP.tag)
-			.properties(p -> p.lightLevel(s -> s.getValue(ModernLampBlock.LIT) ? 15 : 0))
-			.blockstate(new ModernLampGenerator(DyeColor.WHITE)::generate)
-			.item()
-			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_redstone_lamp"))
-			.transform(ModelGen.customItemModel("modern_lamp", "white"))
-			.register();
-	@Deprecated
-	public static final BlockEntry<ModernRedstoneLampPanelBlock> WHITE_MODERN_REDSTONE_LAMP_PANEL = REGISTRATE
-			.block("white_modern_redstone_lamp_panel", ModernRedstoneLampPanelBlock::new)
-			.lang("White Modern Redstone Lamp [DEPRECATED]")
-			.initialProperties(() -> Blocks.REDSTONE_LAMP)
-			.tag(AllTags.AllBlockTags.WRENCH_PICKUP.tag)
-			.properties(p -> p.lightLevel(s -> s.getValue(ModernLampBlock.LIT) ? 15 : 0))
-			.blockstate(new ModernLampPanelGenerator(DyeColor.WHITE)::generate)
-			.item()
-			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_redstone_lamp"))
 			.transform(ModelGen.customItemModel("modern_lamp_panel", "white"))
 			.register();
 
