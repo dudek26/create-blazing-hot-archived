@@ -49,7 +49,6 @@ public class BlazingTags {
 
 	public enum NameSpace {
 		MOD(BlazingHot.ID, false, true),
-		CREATE("create", false, true),
 		COMMON("c");
 
 		public final String id;
@@ -187,6 +186,7 @@ public class BlazingTags {
 		MOLTEN_BLAZE_GOLD_BUCKETS(COMMON),
 		NETHERRACK_DUSTS(COMMON),
 		SOUL_SAND_DUSTS(COMMON),
+		FOODS(COMMON),
 
 		NETHER_FLORA;
 

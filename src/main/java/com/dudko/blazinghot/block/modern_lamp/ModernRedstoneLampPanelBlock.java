@@ -19,6 +19,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 @SuppressWarnings("deprecation")
+@Deprecated(forRemoval = true)
 public class ModernRedstoneLampPanelBlock extends Block {
 
 	public static final BooleanProperty LIT = BlockStateProperties.LIT;

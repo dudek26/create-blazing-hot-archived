@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 
 @SuppressWarnings("deprecation")
+@Deprecated(forRemoval = true)
 public class ModernRedstoneLampBlock extends Block {
 
 	public static final BooleanProperty LIT = BlockStateProperties.LIT;

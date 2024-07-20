@@ -1,7 +1,17 @@
 {
-  "item.blazinghot.blaze_carrot.tooltip": "BLAZE CARROT",
-  "item.blazinghot.blaze_carrot.tooltip.summary": "_Extinguishes_ after being eaten",
+  "item.blazinghot.extinguishing_food.tooltip": "BLAZE CARROT",
+  "item.blazinghot.extinguishing_food.tooltip.summary": "_Extinguishes_ the consumer after being eaten",
 
   "item.blazinghot.blaze_arrow.tooltip": "BLAZE ARROW",
-  "item.blazinghot.blaze_arrow.tooltip.summary": "Deals _extra damage_ when hitting a target in _The Nether_ dimension"
+  "item.blazinghot.blaze_arrow.tooltip.summary": "Deals _extra damage_ when hitting a target in _The Nether_ dimension",
+
+  "item.blazinghot.modern_lamp.tooltip": "MODERN LAMP",
+  "item.blazinghot.modern_lamp.tooltip.summary": "A _modern_ lamp that can be used to _light up_ your builds.",
+  "item.blazinghot.modern_lamp.tooltip.condition1": "When R-Clicked with Empty Hand",
+  "item.blazinghot.modern_lamp.tooltip.behaviour1": "Toggles between the _on_ and _off_ state",
+  "item.blazinghot.modern_lamp.tooltip.condition2": "When R-Clicked with Wrench",
+  "item.blazinghot.modern_lamp.tooltip.behaviour2": "Locks the _current state_",
+
+  "item.blazinghot.modern_redstone_lamp.tooltip": "MODERN REDSTONE LAMP",
+  "item.blazinghot.modern_redstone_lamp.tooltip.summary": "A _modern, redstone-controlled_ lamp block that can be used to _light up_ your builds."
 }

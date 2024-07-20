@@ -10,12 +10,14 @@ import com.dudko.blazinghot.block.modern_lamp.ModernRedstoneLampPanelBlock;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.ModelGen;
+import com.simibubi.create.foundation.item.ItemDescription;
 import com.tterrag.registrate.builders.BlockBuilder;
 import com.tterrag.registrate.builders.ItemBuilder;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 
 import io.github.fabricators_of_create.porting_lib.tags.Tags;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -42,34 +44,46 @@ public class BlazingBlocks {
 	public static final BlockEntry<ModernLampBlock> WHITE_MODERN_LAMP = REGISTRATE
 			.block("white_modern_lamp", ModernLampBlock::new)
 			.initialProperties(() -> Blocks.GLOWSTONE)
+			.tag(AllTags.AllBlockTags.WRENCH_PICKUP.tag)
 			.properties(p -> p.lightLevel(s -> s.getValue(ModernLampBlock.LIT) ? 15 : 0))
 			.blockstate(new ModernLampGenerator(DyeColor.WHITE)::generate)
 			.item()
+			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_lamp"))
 			.transform(ModelGen.customItemModel("modern_lamp", "white"))
 			.register();
 	public static final BlockEntry<ModernLampPanelBlock> WHITE_MODERN_LAMP_PANEL = REGISTRATE
 			.block("white_modern_lamp_panel", ModernLampPanelBlock::new)
 			.initialProperties(() -> Blocks.GLOWSTONE)
+			.tag(AllTags.AllBlockTags.WRENCH_PICKUP.tag)
 			.properties(p -> p.lightLevel(s -> s.getValue(ModernLampBlock.LIT) ? 15 : 0))
 			.blockstate(new ModernLampPanelGenerator(DyeColor.WHITE)::generate)
 			.item()
+			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_lamp"))
 			.transform(ModelGen.customItemModel("modern_lamp_panel", "white"))
 			.register();
 
+	@Deprecated
 	public static final BlockEntry<ModernRedstoneLampBlock> WHITE_MODERN_REDSTONE_LAMP = REGISTRATE
 			.block("white_modern_redstone_lamp", ModernRedstoneLampBlock::new)
+			.lang("White Modern Redstone Lamp [DEPRECATED]")
 			.initialProperties(() -> Blocks.REDSTONE_LAMP)
+			.tag(AllTags.AllBlockTags.WRENCH_PICKUP.tag)
 			.properties(p -> p.lightLevel(s -> s.getValue(ModernLampBlock.LIT) ? 15 : 0))
 			.blockstate(new ModernLampGenerator(DyeColor.WHITE)::generate)
 			.item()
+			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_redstone_lamp"))
 			.transform(ModelGen.customItemModel("modern_lamp", "white"))
 			.register();
+	@Deprecated
 	public static final BlockEntry<ModernRedstoneLampPanelBlock> WHITE_MODERN_REDSTONE_LAMP_PANEL = REGISTRATE
 			.block("white_modern_redstone_lamp_panel", ModernRedstoneLampPanelBlock::new)
+			.lang("White Modern Redstone Lamp [DEPRECATED]")
 			.initialProperties(() -> Blocks.REDSTONE_LAMP)
+			.tag(AllTags.AllBlockTags.WRENCH_PICKUP.tag)
 			.properties(p -> p.lightLevel(s -> s.getValue(ModernLampBlock.LIT) ? 15 : 0))
 			.blockstate(new ModernLampPanelGenerator(DyeColor.WHITE)::generate)
 			.item()
+			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_redstone_lamp"))
 			.transform(ModelGen.customItemModel("modern_lamp_panel", "white"))
 			.register();
 
@@ -80,10 +94,10 @@ public class BlazingBlocks {
 	public static <T extends Block, P> NonNullFunction<BlockBuilder<T, P>, ItemBuilder<BlockItem, BlockBuilder<T, P>>> tagBlockAndItem(String... path) {
 		return b -> {
 			for (String p : path)
-				b.tag(AllTags.forgeBlockTag(p));
+				b.tag(BlazingTags.commonBlockTag(p));
 			ItemBuilder<BlockItem, BlockBuilder<T, P>> item = b.item();
 			for (String p : path)
-				item.tag(AllTags.forgeItemTag(p));
+				item.tag(BlazingTags.commonItemTag(p));
 			return item;
 		};
 	}
