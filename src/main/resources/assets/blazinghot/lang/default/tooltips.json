@@ -1,0 +1,7 @@
+{
+  "item.blazinghot.blaze_carrot.tooltip": "BLAZE CARROT",
+  "item.blazinghot.blaze_carrot.tooltip.summary": "_Extinguishes_ after being eaten",
+
+  "item.blazinghot.blaze_arrow.tooltip": "BLAZE ARROW",
+  "item.blazinghot.blaze_arrow.tooltip.summary": "Deals _extra damage_ when hitting a target in _The Nether_ dimension"
+}

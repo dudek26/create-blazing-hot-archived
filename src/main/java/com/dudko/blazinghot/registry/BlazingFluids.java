@@ -34,13 +34,13 @@ import net.minecraft.world.level.material.FluidState;
 @SuppressWarnings("UnstableApiUsage")
 public class BlazingFluids {
 
-	private static final CreateRegistrate REGISTRATE = BlazingHot.REGISTRATE.setCreativeTab(BlazingTabs.BLAZING_HOT.key());
+	private static final CreateRegistrate REGISTRATE = BlazingHot.REGISTRATE.setCreativeTab(BlazingCreativeTabs.BLAZING_HOT.key());
 
 
 	public static final FluidEntry<SimpleFlowableFluid.Flowing> MOLTEN_GOLD = REGISTRATE
 			.standardFluid("molten_gold")
 			.lang("Molten Gold")
-			.tag(BlazingTags.forgeFluidTag("molten_gold"), FluidTags.LAVA) // fabric: lava tag controls physics
+			.tag(BlazingTags.commonFluidTag("molten_gold"), FluidTags.LAVA) // fabric: lava tag controls physics
 			.fluidProperties(p -> p.levelDecreasePerBlock(2).tickRate(5).flowSpeed(3).blastResistance(100f))
 			.fluidAttributes(() -> new CreateAttributeHandler("block.blazinghot.molten_gold", 1500, 1400))
 			.block()
@@ -66,7 +66,7 @@ public class BlazingFluids {
 	public static final FluidEntry<SimpleFlowableFluid.Flowing> MOLTEN_BLAZE_GOLD = REGISTRATE
 			.standardFluid("molten_blaze_gold")
 			.lang("Molten Blaze Gold")
-			.tag(BlazingTags.forgeFluidTag("molten_blaze_gold"), FluidTags.LAVA) // fabric: lava tag controls physics
+			.tag(BlazingTags.commonFluidTag("molten_blaze_gold"), FluidTags.LAVA) // fabric: lava tag controls physics
 			.fluidProperties(p -> p.levelDecreasePerBlock(2).tickRate(30).flowSpeed(3).blastResistance(100f))
 			.fluidAttributes(() -> new CreateAttributeHandler("block.blazinghot.molten_blaze_gold", 1500, 1400))
 			.block()

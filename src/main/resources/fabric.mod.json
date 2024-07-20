@@ -16,6 +16,9 @@
     ],
     "client": [
       "com.dudko.blazinghot.BlazingHotClient"
+    ],
+    "fabric-datagen": [
+      "com.dudko.blazinghot.BlazingHotData"
     ]
   },
   "mixins": [

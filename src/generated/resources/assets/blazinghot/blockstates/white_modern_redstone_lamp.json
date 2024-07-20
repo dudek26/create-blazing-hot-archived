@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "blazinghot:block/modern_lamp/white"
+    },
+    "lit=true": {
+      "model": "blazinghot:block/modern_lamp/white_powered"
+    }
+  }
+}

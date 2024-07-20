@@ -1,12 +1,11 @@
 package com.dudko.blazinghot.registry;
 
 
-import static com.simibubi.create.AllTags.AllItemTags.CREATE_INGOTS;
 import static com.simibubi.create.AllTags.AllItemTags.PLATES;
 
 import com.dudko.blazinghot.BlazingHot;
 import com.dudko.blazinghot.item.BlazeArrowItem;
-import com.dudko.blazinghot.item.BlazeCarrotItem;
+import com.dudko.blazinghot.item.ExtinguishingItem;
 import com.dudko.blazinghot.item.Foods;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -21,7 +20,7 @@ import net.minecraft.world.item.Rarity;
 @SuppressWarnings("SameParameterValue")
 public class BlazingItems {
 
-	private static final CreateRegistrate REGISTRATE = BlazingHot.REGISTRATE.setCreativeTab(BlazingTabs.BLAZING_HOT.key());
+	private static final CreateRegistrate REGISTRATE = BlazingHot.REGISTRATE.setCreativeTab(BlazingCreativeTabs.BLAZING_HOT.key());
 
 	private static ItemEntry<Item> ingredient(String name) {
 		return REGISTRATE.item(name, Item::new).register();
@@ -32,10 +31,7 @@ public class BlazingItems {
 	}
 
 	private static ItemEntry<Item> food(String name, Foods food, Rarity rarity) {
-		return REGISTRATE
-				.item(name, Item::new)
-				.properties(p -> p.rarity(rarity).food(food.foodProperties))
-				.register();
+		return REGISTRATE.item(name, Item::new).properties(p -> p.rarity(rarity).food(food.foodProperties)).register();
 	}
 
 	private static ItemEntry<Item> food(String name, Foods food) {
@@ -48,33 +44,35 @@ public class BlazingItems {
 	}
 
 	public static final ItemEntry<Item> BLAZE_GOLD_INGOT = taggedIngredient("blaze_gold_ingot",
-																			CREATE_INGOTS.tag,
-																			BlazingTags.forgeItemTag("blaze_gold_ingots")), BLAZE_GOLD_NUGGET = taggedIngredient(
+																			BlazingTags.commonItemTag(
+																					"blaze_gold_ingots")), BLAZE_GOLD_NUGGET = taggedIngredient(
 			"blaze_gold_nugget",
-			BlazingTags.forgeItemTag("blaze_gold_nuggets")), BLAZE_GOLD_SHEET = taggedIngredient("blaze_gold_sheet",
-																								 BlazingTags.forgeItemTag(
-																										 "blaze_gold_plates"),
-																								 PLATES.tag), BLAZE_GOLD_ROD = taggedIngredient(
+			BlazingTags.commonItemTag("blaze_gold_nuggets")), BLAZE_GOLD_SHEET = taggedIngredient("blaze_gold_sheet",
+																								  BlazingTags.commonItemTag(
+																										  "blaze_gold_plates"),
+																								  PLATES.tag), BLAZE_GOLD_ROD = taggedIngredient(
 			"blaze_gold_rod",
-			BlazingTags.forgeItemTag("blaze_gold_rods"));
+			BlazingTags.commonItemTag("blaze_gold_rods"));
 
 	public static final ItemEntry<Item> NETHERRACK_DUST = taggedIngredient("netherrack_dust",
-																		   BlazingTags.forgeItemTag("netherrack_dusts")), STONE_DUST = taggedIngredient(
+																		   BlazingTags.commonItemTag("netherrack_dusts")), STONE_DUST = taggedIngredient(
 			"stone_dust",
-			BlazingTags.forgeItemTag("stone_dusts")), SOUL_DUST = taggedIngredient("soul_dust",
-																				   BlazingTags.forgeItemTag(
-																						   "soul_sand_dusts"));
+			BlazingTags.commonItemTag("stone_dusts")), SOUL_DUST = taggedIngredient("soul_dust",
+																					BlazingTags.commonItemTag(
+																							"soul_sand_dusts"));
 
 	public static final ItemEntry<Item> NETHER_COMPOUND = ingredient("nether_compound"), NETHER_ESSENCE = ingredient(
 			"nether_essence");
 
-	public static final ItemEntry<BlazeCarrotItem> BLAZE_CARROT = REGISTRATE
-			.item("blaze_carrot", BlazeCarrotItem::new)
+	public static final ItemEntry<ExtinguishingItem> BLAZE_CARROT = REGISTRATE
+			.item("blaze_carrot", ExtinguishingItem::new)
 			.properties(p -> p.food(Foods.BLAZE_CARROT.foodProperties))
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.blaze_carrot"))
 			.register();
 
-	public static final ItemEntry<Item> STELLAR_GOLDEN_APPLE = food("stellar_golden_apple", Foods.STELLAR_GOLDEN_APPLE, Rarity.RARE);
+	public static final ItemEntry<Item> STELLAR_GOLDEN_APPLE = food("stellar_golden_apple",
+																	Foods.STELLAR_GOLDEN_APPLE,
+																	Rarity.RARE);
 
 	public static final ItemEntry<SequencedAssemblyItem> GILDED_STELLAR_GOLDEN_APPLE = REGISTRATE
 			.item("gilded_stellar_golden_apple", SequencedAssemblyItem::new)

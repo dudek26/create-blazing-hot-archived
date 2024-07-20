@@ -3,20 +3,25 @@ package com.dudko.blazinghot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.dudko.blazinghot.data.BlazingLangGen;
+import com.dudko.blazinghot.data.BlazingTagGen;
 import com.dudko.blazinghot.registry.BlazingBlocks;
+import com.dudko.blazinghot.registry.BlazingCreativeTabs;
 import com.dudko.blazinghot.registry.BlazingEntityTypes;
 import com.dudko.blazinghot.registry.BlazingFluids;
 import com.dudko.blazinghot.registry.BlazingItems;
-import com.dudko.blazinghot.registry.BlazingTabs;
+import com.dudko.blazinghot.registry.BlazingTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipHelper;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import com.tterrag.registrate.providers.ProviderType;
 
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 
 public class BlazingHot implements ModInitializer {
@@ -35,11 +40,13 @@ public class BlazingHot implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		BlazingItems.setRegister();
-		BlazingTabs.setRegister();
+		BlazingCreativeTabs.setRegister();
 		BlazingBlocks.setRegister();
 		BlazingFluids.setRegister();
 		BlazingFluids.registerFluidInteractions();
 		BlazingEntityTypes.register();
+		BlazingTags.register();
+
 		REGISTRATE.register();
 
 		LOGGER.info("Create addon mod [{}] is loading alongside Create [{}]!", NAME, Create.VERSION);
@@ -51,5 +58,11 @@ public class BlazingHot implements ModInitializer {
 
 	public static ResourceLocation asResource(String path) {
 		return new ResourceLocation(ID, path);
+	}
+
+	public static void gatherData(DataGenerator gen) {
+		REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, BlazingTagGen::generateBlockTags);
+		REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, BlazingTagGen::generateItemTags);
+		REGISTRATE.addDataGenerator(ProviderType.LANG, BlazingLangGen::generate);
 	}
 }
