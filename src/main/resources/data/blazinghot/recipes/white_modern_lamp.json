@@ -11,10 +11,10 @@
       "tag": "c:blaze_gold_rods"
     },
     "l": {
-      "item": "minecraft:redstone_lamp"
+      "item": "minecraft:glowstone"
     }
   },
   "result": {
-    "item": "blazinghot:modern_redstone_lamp"
+    "item": "blazinghot:white_modern_lamp"
   }
 }
