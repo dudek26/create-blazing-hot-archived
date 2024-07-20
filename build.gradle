@@ -143,6 +143,8 @@ java {
 }
 
 jar {
+	duplicatesStrategy = DuplicatesStrategy.WARN
+
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}" }
 	}
