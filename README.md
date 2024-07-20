@@ -41,11 +41,11 @@ and existing metals, most notably their liquid forms.
     <summary>Food</summary>
     <p>This mod adds new Apple and Carrot variants:</p>
     <ul>
-        <li>Blaze Carrot - has the stats of a Golden Carrot, but it also extinguishes on consumption</li>
-        <li>Blaze Apple - crafted with Blaze Gold, has the effects of the Golden Apple and 5 minutes of Fire Resistance</li>
-        <li>Stellar Blaze Apple - crafted by deploying a Nether Star on a Blaze Apple and gives 8 minutes of Fire Resistance instead of 5</li>
-        <li>Enchanted Blaze Apple - crafted in Sequenced Assembly, has the effects of the Stellar Blaze Apple, but gives Absorption III instead of I and also gives Strength for 5 minutes</li>
-        <li>Stellar Golden Apple - has the stats of a Golden Apple and also gives Fire Resistance for 5 minutes; can be crafted into an Enchanted Golden Apple</li>
+        <li><b>Blaze Carrot</b> - has the stats of a Golden Carrot, but it also extinguishes on consumption</li>
+        <li><b>Blaze Apple</b> - crafted with Blaze Gold, has the effects of the Golden Apple and 5 minutes of Fire Resistance</li>
+        <li><b>Stellar Blaze Apple</b> - crafted by deploying a Nether Star on a Blaze Apple and gives 8 minutes of Fire Resistance instead of 5</li>
+        <li><b>Enchanted Blaze Apple</b> - crafted in Sequenced Assembly, has the effects of the Stellar Blaze Apple, but gives Absorption III instead of I and also gives Strength for 5 minutes</li>
+        <li><b>Stellar Golden Apple</b> - has the stats of a Golden Apple and also gives Fire Resistance for 5 minutes; can be crafted into an Enchanted Golden Apple</li>
     </ul>
     <ul>
         <li>There are more foods planned in the future for other metals.</li>
