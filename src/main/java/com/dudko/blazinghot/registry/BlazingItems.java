@@ -54,7 +54,7 @@ public class BlazingItems {
 
 	public static final ItemEntry<Item> BLAZE_GOLD_INGOT = taggedIngredient("blaze_gold_ingot",
 																			BlazingTags.commonItemTag(
-																					"blaze_gold_ingots")), BLAZE_GOLD_NUGGET = taggedIngredient(
+																					"blaze_gold_ingots"), ItemTags.BEACON_PAYMENT_ITEMS), BLAZE_GOLD_NUGGET = taggedIngredient(
 			"blaze_gold_nugget",
 			BlazingTags.commonItemTag("blaze_gold_nuggets")), BLAZE_GOLD_SHEET = taggedIngredient("blaze_gold_sheet",
 																								  BlazingTags.commonItemTag(
