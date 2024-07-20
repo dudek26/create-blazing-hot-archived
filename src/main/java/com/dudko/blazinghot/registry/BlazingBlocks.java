@@ -6,6 +6,8 @@ import com.dudko.blazinghot.block.modern_lamp.ModernLampGenerator;
 import com.dudko.blazinghot.block.modern_lamp.ModernLampPanelBlock;
 import com.dudko.blazinghot.block.modern_lamp.ModernLampPanelGenerator;
 import com.simibubi.create.AllTags;
+import com.simibubi.create.content.redstone.RoseQuartzLampBlock;
+import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.ModelGen;
 import com.simibubi.create.foundation.item.ItemDescription;
@@ -45,9 +47,16 @@ public class BlazingBlocks {
 			.tag(AllTags.AllBlockTags.WRENCH_PICKUP.tag)
 			.properties(p -> p.lightLevel(s -> s.getValue(ModernLampBlock.LIT) ? 15 : 0))
 			.blockstate(new ModernLampGenerator(DyeColor.WHITE)::generate)
+//			.blockstate((c, p) -> BlockStateGen.simpleBlock(c, p, s -> {
+//				boolean powered = s.getValue(RoseQuartzLampBlock.POWERING);
+//				String name = c.getName() + (powered ? "_powered" : "");
+//				return p.models()
+//						.cubeAll(name, p.modLoc("block/" + name));
+//			}))
 			.item()
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_lamp"))
-			.transform(ModelGen.customItemModel("modern_lamp", "white"))
+			.model((c, b) -> b.blockItem(c).texture("#all", b.modLoc("block/modern_lamp/white")))
+			.build()
 			.register();
 	public static final BlockEntry<ModernLampPanelBlock> WHITE_MODERN_LAMP_PANEL = REGISTRATE
 			.block("white_modern_lamp_panel", ModernLampPanelBlock::new)

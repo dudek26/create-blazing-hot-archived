@@ -1,6 +1,6 @@
-// 1.20.1	2024-07-20T19:17:58.3877845	Create: Blazing Hot/Registrate Provider for blazinghot [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+// 1.20.1	2024-07-20T20:00:52.5247669	Create: Blazing Hot/Registrate Provider for blazinghot [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
 673e052b0cd70bbd0dc75bbfbcf08909b245f6e5 data\minecraft\tags\entity_types\arrows.json
-49ed27eecfc8d0a9ce032663a026ef611596c739 assets\blazinghot\models\item\blaze_gold_rod.json
+166ab31406d965aa8edf422fea56c8cc35089f4a assets\blazinghot\models\item\blaze_gold_rod.json
 33ca97d55a917dd081b474542398867185ca83c1 data\minecraft\tags\fluids\lava.json
 639c77f23c3e29ed4552ca259d576bf5e4cf5db9 assets\blazinghot\blockstates\molten_blaze_gold.json
 0839e81e7431513abbfa093f7dea15cbe73b5388 data\c\tags\items\netherrack_dusts.json
@@ -12,14 +12,15 @@ c4a11a37f2282eee1f55408fedabd7bbe6701012 assets\blazinghot\models\block\molten_b
 002f89017e2163c2a170203287d8e7340d9ebb29 data\minecraft\tags\items\piglin_loved.json
 e9faf984cd05c06b895d5f50722a634aed1145a0 data\c\tags\items\stone_dusts.json
 673e052b0cd70bbd0dc75bbfbcf08909b245f6e5 data\minecraft\tags\items\arrows.json
+f3a3e7a1cb8fa2ba81f74e841fae2fe6ce876c8a assets\blazinghot\models\block\white_modern_lamp_powered.json
 428dcee40587baec51c4f2de84c0cd45deebedfc data\c\tags\items\blaze_gold_ingots.json
 32add9266bf639b26b4b5000c9ec31f255ea9aec assets\blazinghot\models\item\blaze_carrot.json
 dd6654eef8edf1e4b42cee91244744b70abb7de9 assets\blazinghot\models\item\blaze_gold_ingot.json
 428dcee40587baec51c4f2de84c0cd45deebedfc data\minecraft\tags\items\beacon_payment_items.json
 28f3f6488fbf24975269e7bc77316663667fab64 data\c\tags\items\soul_sand_dusts.json
 fa7505e8a7e0f70d39707be36843002b90faef5c assets\blazinghot\models\item\blaze_gold_nugget.json
-caa272ac932e94b411ce6f6aa579c568f715ab65 assets\blazinghot\models\item\nether_compound.json
 41243fbbd065f709bd7508b5a481172109465cc5 assets\blazinghot\models\item\molten_blaze_gold_bucket.json
+caa272ac932e94b411ce6f6aa579c568f715ab65 assets\blazinghot\models\item\nether_compound.json
 e8dabbff8a43c712de93f4ac7b7ed051121703d2 assets\blazinghot\models\item\soul_dust.json
 66ed6f49dd422484bf0294f2713863e872010358 data\c\tags\fluids\molten_blaze_gold.json
 b3c3d72048c3bc8731d2e5cdb0dc270158a865c4 assets\blazinghot\blockstates\blaze_gold_block.json
@@ -27,6 +28,7 @@ d95bfe336373cd7e83ded572e4bcf54900f7ec52 data\blazinghot\tags\items\nether_flora
 e0964cf4b3081351fbcb42ba6e5488c423ce6d84 data\blazinghot\loot_tables\blocks\white_modern_lamp_panel.json
 899ef52adbffffd6a5510fe39083593f4251e68a assets\blazinghot\models\item\white_modern_lamp_panel.json
 c11690e1de943f4601db4c5253db77ea133e1a4d assets\blazinghot\models\block\blaze_gold_block.json
+cf3b7239a15b0abb68619b2442b2e75718742229 assets\blazinghot\models\block\white_modern_lamp.json
 94541e8c3c1c7f39ce421faa4bcde1b9694cb3a7 data\blazinghot\loot_tables\blocks\blaze_gold_block.json
 2c1c204ce899f7d8afaae5f2ad8f80cd2ea53daf data\minecraft\tags\blocks\needs_iron_tool.json
 8abe5369dbc6ed8e861b72f9b93a07b36779b844 assets\blazinghot\blockstates\white_modern_lamp_panel.json
@@ -44,9 +46,9 @@ cb04f841b548586d0485eff5f692a8786dbffb64 assets\blazinghot\models\item\blaze_gol
 8bc2e1cd8ef576c4551050b0fc08e495f4f38396 assets\blazinghot\lang\en_us.json
 2c1c204ce899f7d8afaae5f2ad8f80cd2ea53daf data\minecraft\tags\blocks\beacon_base_blocks.json
 12c3e4e84f4d6e5d20a3074c39ffe4b05d703516 data\c\tags\items\plates.json
-5e8cdaf5cd1eee8082b8d6f665ea5044b913f2fe assets\blazinghot\models\item\white_modern_lamp.json
+ba857180e82efd9afa0d0868851d85f1ece2654f assets\blazinghot\models\item\white_modern_lamp.json
 8ca798f9fd204c254bf186c259e59273f4512de4 assets\blazinghot\models\item\blaze_gold_block.json
-5525bbf655fc11789cac0abd730e608ce9c5f03d assets\blazinghot\blockstates\white_modern_lamp.json
+bf769d5c73fac2974cc405afc3079d3b58ccfd9f assets\blazinghot\blockstates\white_modern_lamp.json
 3b4842e1e0698979c12c216eb7726a376c53eb6c data\blazinghot\loot_tables\blocks\white_modern_lamp.json
 a280b7238012b1d028d2d67dd09bc5d6c59a40ff assets\blazinghot\models\item\blaze_arrow.json
 2c1c204ce899f7d8afaae5f2ad8f80cd2ea53daf data\c\tags\blocks\storage_blocks.json

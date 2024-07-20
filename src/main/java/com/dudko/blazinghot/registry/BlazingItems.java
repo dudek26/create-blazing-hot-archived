@@ -54,14 +54,17 @@ public class BlazingItems {
 
 	public static final ItemEntry<Item> BLAZE_GOLD_INGOT = taggedIngredient("blaze_gold_ingot",
 																			BlazingTags.commonItemTag(
-																					"blaze_gold_ingots"), ItemTags.BEACON_PAYMENT_ITEMS), BLAZE_GOLD_NUGGET = taggedIngredient(
+																					"blaze_gold_ingots"),
+																			ItemTags.BEACON_PAYMENT_ITEMS), BLAZE_GOLD_NUGGET = taggedIngredient(
 			"blaze_gold_nugget",
 			BlazingTags.commonItemTag("blaze_gold_nuggets")), BLAZE_GOLD_SHEET = taggedIngredient("blaze_gold_sheet",
 																								  BlazingTags.commonItemTag(
 																										  "blaze_gold_plates"),
-																								  PLATES.tag), BLAZE_GOLD_ROD = taggedIngredient(
-			"blaze_gold_rod",
-			BlazingTags.commonItemTag("blaze_gold_rods"));
+																								  PLATES.tag), BLAZE_GOLD_ROD = REGISTRATE
+			.item("blaze_gold_rod", Item::new)
+			.tag(BlazingTags.commonItemTag("blaze_gold_rods"))
+			.model((c, p) -> p.handheld(c))
+			.register();
 
 	public static final ItemEntry<Item> NETHERRACK_DUST = taggedIngredient("netherrack_dust",
 																		   BlazingTags.commonItemTag("netherrack_dusts")), STONE_DUST = taggedIngredient(

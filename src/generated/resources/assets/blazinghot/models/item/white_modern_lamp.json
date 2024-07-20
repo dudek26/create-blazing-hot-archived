@@ -1,3 +1,6 @@
 {
-  "parent": "blazinghot:block/modern_lamp/white"
+  "parent": "blazinghot:block/white_modern_lamp",
+  "textures": {
+    "#all": "blazinghot:block/modern_lamp/white"
+  }
 }

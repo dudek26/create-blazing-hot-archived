@@ -29,9 +29,12 @@ public class ModernLampGenerator extends SpecialBlockStateGen {
 
 	@Override
 	public <T extends Block> ModelFile getModel(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov, BlockState state) {
-		String variant = color.getName();
-		if (state.getValue(ModernLampBlock.LIT)) variant += "_powered";
-
-		return prov.models().getExistingFile(prov.modLoc("block/modern_lamp/" + variant));
+		String variant = color.getName() ;
+		String name = variant + "_modern_lamp";
+		if (state.getValue(ModernLampBlock.LIT)) {
+			variant += "_powered";
+			name += "_powered";
+		}
+		return prov.models().cubeAll(name, prov.modLoc("block/modern_lamp/" + variant));
 	}
 }
