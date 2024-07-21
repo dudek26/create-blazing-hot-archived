@@ -67,30 +67,31 @@ public class BlazingTags {
 
 	}
 
-	public enum BlockTags {
-		BLAZE_GOLD_BLOCKS(COMMON);
+	public enum Blocks {
+		BLAZE_GOLD_BLOCKS(COMMON),
+		MODERN_LAMPS;
 
 		public final TagKey<Block> tag;
 		public final boolean alwaysDatagen;
 
 
-		BlockTags() {
+		Blocks() {
 			this(MOD);
 		}
 
-		BlockTags(NameSpace namespace) {
+		Blocks(NameSpace namespace) {
 			this(namespace, namespace.optionalDefault, namespace.alwaysDatagenDefault);
 		}
 
-		BlockTags(NameSpace namespace, String path) {
+		Blocks(NameSpace namespace, String path) {
 			this(namespace, path, namespace.optionalDefault, namespace.alwaysDatagenDefault);
 		}
 
-		BlockTags(NameSpace namespace, boolean optional, boolean alwaysDatagen) {
+		Blocks(NameSpace namespace, boolean optional, boolean alwaysDatagen) {
 			this(namespace, null, optional, alwaysDatagen);
 		}
 
-		BlockTags(NameSpace namespace, String path, boolean optional, boolean alwaysDatagen) {
+		Blocks(NameSpace namespace, String path, boolean optional, boolean alwaysDatagen) {
 			ResourceLocation id = new ResourceLocation(namespace.id, path == null ? Lang.asId(name()) : path);
 			if (optional) {
 				tag = optionalTag(BuiltInRegistries.BLOCK, id);
@@ -118,7 +119,7 @@ public class BlazingTags {
 		}
 	}
 
-	public enum FluidTags {
+	public enum Fluids {
 		MOLTEN_BLAZE_GOLD(COMMON),
 		MOLTEN_GOLD(COMMON);
 
@@ -126,23 +127,23 @@ public class BlazingTags {
 		public final boolean alwaysDatagen;
 
 
-		FluidTags() {
+		Fluids() {
 			this(MOD);
 		}
 
-		FluidTags(NameSpace namespace) {
+		Fluids(NameSpace namespace) {
 			this(namespace, namespace.optionalDefault, namespace.alwaysDatagenDefault);
 		}
 
-		FluidTags(NameSpace namespace, String path) {
+		Fluids(NameSpace namespace, String path) {
 			this(namespace, path, namespace.optionalDefault, namespace.alwaysDatagenDefault);
 		}
 
-		FluidTags(NameSpace namespace, boolean optional, boolean alwaysDatagen) {
+		Fluids(NameSpace namespace, boolean optional, boolean alwaysDatagen) {
 			this(namespace, null, optional, alwaysDatagen);
 		}
 
-		FluidTags(NameSpace namespace, String path, boolean optional, boolean alwaysDatagen) {
+		Fluids(NameSpace namespace, String path, boolean optional, boolean alwaysDatagen) {
 			ResourceLocation id = new ResourceLocation(namespace.id, path == null ? Lang.asId(name()) : path);
 			if (optional) {
 				tag = optionalTag(BuiltInRegistries.BLOCK, id);
@@ -171,12 +172,12 @@ public class BlazingTags {
 	}
 
 	public static void register() {
-		BlockTags.register();
-		FluidTags.register();
-		ItemTags.register();
+		Blocks.register();
+		Fluids.register();
+		Items.register();
 	}
 
-	public enum ItemTags {
+	public enum Items {
 		BLAZE_GOLD_BLOCKS(COMMON),
 		BLAZE_GOLD_INGOTS(COMMON),
 		BLAZE_GOLD_RODS(COMMON),
@@ -188,28 +189,29 @@ public class BlazingTags {
 		SOUL_SAND_DUSTS(COMMON),
 		FOODS(COMMON),
 
+		MODERN_LAMPS,
 		NETHER_FLORA;
 
 		public final TagKey<Item> tag;
 		public final boolean alwaysDatagen;
 
-		ItemTags() {
+		Items() {
 			this(NameSpace.MOD);
 		}
 
-		ItemTags(NameSpace namespace) {
+		Items(NameSpace namespace) {
 			this(namespace, namespace.optionalDefault, namespace.alwaysDatagenDefault);
 		}
 
-		ItemTags(NameSpace namespace, String path) {
+		Items(NameSpace namespace, String path) {
 			this(namespace, path, namespace.optionalDefault, namespace.alwaysDatagenDefault);
 		}
 
-		ItemTags(NameSpace namespace, boolean optional, boolean alwaysDatagen) {
+		Items(NameSpace namespace, boolean optional, boolean alwaysDatagen) {
 			this(namespace, null, optional, alwaysDatagen);
 		}
 
-		ItemTags(NameSpace namespace, String path, boolean optional, boolean alwaysDatagen) {
+		Items(NameSpace namespace, String path, boolean optional, boolean alwaysDatagen) {
 			ResourceLocation id = new ResourceLocation(namespace.id, path == null ? Lang.asId(name()) : path);
 			if (optional) {
 				tag = optionalTag(BuiltInRegistries.ITEM, id);
@@ -234,19 +236,19 @@ public class BlazingTags {
 	}
 
 	public static void provideLangEntries(BiConsumer<String, String> consumer) {
-		for (BlockTags blockTag : BlockTags.values()) {
+		for (Blocks blockTag : Blocks.values()) {
 			ResourceLocation loc = blockTag.tag.location();
 			consumer.accept("tag.block." + loc.getNamespace() + "." + loc.getPath().replace('/', '.'),
 							titleCaseConversion(blockTag.name()).replace('_', ' '));
 		}
 
-		for (ItemTags itemTag : ItemTags.values()) {
+		for (Items itemTag : Items.values()) {
 			ResourceLocation loc = itemTag.tag.location();
 			consumer.accept("tag.item." + loc.getNamespace() + "." + loc.getPath().replace('/', '.'),
 							titleCaseConversion(itemTag.name().replace('_', ' ')));
 		}
 
-		for (FluidTags itemTag : FluidTags.values()) {
+		for (Fluids itemTag : Fluids.values()) {
 			ResourceLocation loc = itemTag.tag.location();
 			consumer.accept("tag.fluid." + loc.getNamespace() + "." + loc.getPath().replace('/', '.'),
 							titleCaseConversion(itemTag.name().replace('_', ' ')));

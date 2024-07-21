@@ -1,6 +1,7 @@
 package com.dudko.blazinghot.registry;
 
 
+import static com.dudko.blazinghot.BlazingHot.REGISTRATE;
 import static com.simibubi.create.AllTags.AllItemTags.PLATES;
 
 import com.dudko.blazinghot.BlazingHot;
@@ -8,7 +9,6 @@ import com.dudko.blazinghot.content.item.BlazeArrowItem;
 import com.dudko.blazinghot.content.item.ExtinguishingItem;
 import com.dudko.blazinghot.content.item.Foods;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
-import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.tterrag.registrate.util.entry.ItemEntry;
 
@@ -21,7 +21,9 @@ import net.minecraft.world.item.Rarity;
 @SuppressWarnings({"SameParameterValue", "unused"})
 public class BlazingItems {
 
-	private static final CreateRegistrate REGISTRATE = BlazingHot.REGISTRATE.setCreativeTab(BlazingCreativeTabs.BLAZING_HOT.key());
+	static {
+		setupCreativeTab();
+	}
 
 	private static ItemEntry<Item> ingredient(String name) {
 		return REGISTRATE.item(name, Item::new).register();
@@ -39,7 +41,7 @@ public class BlazingItems {
 		return REGISTRATE
 				.item(name, Item::new)
 				.properties(p -> p.rarity(rarity).food(food.foodProperties))
-				.tag(BlazingTags.ItemTags.FOODS.tag)
+				.tag(BlazingTags.Items.FOODS.tag)
 				.register();
 	}
 
@@ -80,14 +82,14 @@ public class BlazingItems {
 			.item("blaze_carrot", ExtinguishingItem::new)
 			.properties(p -> p.food(Foods.BLAZE_CARROT.foodProperties))
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.extinguishing_food"))
-			.tag(BlazingTags.ItemTags.FOODS.tag)
+			.tag(BlazingTags.Items.FOODS.tag)
 			.register();
 
 	public static final ItemEntry<Item> STELLAR_GOLDEN_APPLE = REGISTRATE
 			.item("stellar_golden_apple", Item::new)
 			.properties(p -> p.food(Foods.STELLAR_GOLDEN_APPLE.foodProperties).rarity(Rarity.RARE).fireResistant())
 			.tag(ItemTags.PIGLIN_LOVED)
-			.tag(BlazingTags.ItemTags.FOODS.tag)
+			.tag(BlazingTags.Items.FOODS.tag)
 			.register();
 
 	public static final ItemEntry<SequencedAssemblyItem> GILDED_STELLAR_GOLDEN_APPLE = REGISTRATE
@@ -97,14 +99,14 @@ public class BlazingItems {
 
 	public static final ItemEntry<ExtinguishingItem> BLAZE_APPLE = REGISTRATE
 			.item("blaze_apple", ExtinguishingItem::new)
-			.tag(BlazingTags.ItemTags.FOODS.tag)
+			.tag(BlazingTags.Items.FOODS.tag)
 			.properties(p -> p.food(Foods.BLAZE_APPLE.foodProperties).rarity(Rarity.RARE).fireResistant())
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.extinguishing_food"))
 			.register();
 
 	public static final ItemEntry<ExtinguishingItem> STELLAR_BLAZE_APPLE = REGISTRATE
 			.item("stellar_blaze_apple", ExtinguishingItem::new)
-			.tag(BlazingTags.ItemTags.FOODS.tag)
+			.tag(BlazingTags.Items.FOODS.tag)
 			.properties(p -> p.food(Foods.STELLAR_BLAZE_APPLE.foodProperties).rarity(Rarity.RARE).fireResistant())
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.extinguishing_food"))
 			.register();
@@ -116,7 +118,7 @@ public class BlazingItems {
 
 	public static final ItemEntry<ExtinguishingItem> ENCHANTED_BLAZE_APPLE = REGISTRATE
 			.item("enchanted_blaze_apple", p -> new ExtinguishingItem(p, true))
-			.tag(BlazingTags.ItemTags.FOODS.tag)
+			.tag(BlazingTags.Items.FOODS.tag)
 			.properties(p -> p.food(Foods.ENCHANTED_BLAZE_APPLE.foodProperties).rarity(Rarity.EPIC).fireResistant())
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.extinguishing_food"))
 			.register();
@@ -129,5 +131,9 @@ public class BlazingItems {
 
 	public static void setRegister() {
 		BlazingHot.LOGGER.info("Registering Mod Items for " + BlazingHot.ID);
+	}
+
+	public static void setupCreativeTab() {
+		REGISTRATE.setCreativeTab(BlazingCreativeTabs.getKey());
 	}
 }

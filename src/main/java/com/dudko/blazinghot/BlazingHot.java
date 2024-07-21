@@ -39,8 +39,9 @@ public class BlazingHot implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		BlazingCreativeTabs.register();
 		BlazingItems.setRegister();
-		BlazingCreativeTabs.setRegister();
 		BlazingBlocks.setRegister();
 		BlazingFluids.setRegister();
 		BlazingFluids.registerFluidInteractions();

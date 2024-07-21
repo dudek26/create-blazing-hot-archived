@@ -1,11 +1,11 @@
 package com.dudko.blazinghot.registry;
 
+import static com.dudko.blazinghot.BlazingHot.REGISTRATE;
+import static com.dudko.blazinghot.registry.BlazingItems.setupCreativeTab;
 import static net.minecraft.world.item.Items.BUCKET;
 
 import javax.annotation.Nullable;
 
-import com.dudko.blazinghot.BlazingHot;
-import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.fluid.FluidHelper;
 import com.simibubi.create.foundation.utility.Iterate;
 import com.tterrag.registrate.fabric.SimpleFlowableFluid;
@@ -33,9 +33,6 @@ import net.minecraft.world.level.material.FluidState;
 
 @SuppressWarnings("UnstableApiUsage")
 public class BlazingFluids {
-
-	private static final CreateRegistrate REGISTRATE = BlazingHot.REGISTRATE.setCreativeTab(BlazingCreativeTabs.BLAZING_HOT.key());
-
 
 	public static final FluidEntry<SimpleFlowableFluid.Flowing> MOLTEN_GOLD = REGISTRATE
 			.standardFluid("molten_gold")

@@ -7,7 +7,6 @@ import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class BlazingTagGen {
 	}
 
 	public static void generateBlockTags(RegistrateTagsProvider<Block> prov) {
-		for (BlazingTags.BlockTags tag : BlazingTags.BlockTags.values()) {
+		for (BlazingTags.Blocks tag : BlazingTags.Blocks.values()) {
 			if (tag.alwaysDatagen) {
 				tagAppender(prov, tag);
 			}
@@ -41,24 +40,24 @@ public class BlazingTagGen {
 
 	public static void generateItemTags(RegistrateTagsProvider<Item> prov) {
 		prov
-				.addTag(BlazingTags.ItemTags.NETHER_FLORA.tag)
-				.add(Items.WARPED_FUNGUS,
-					 Items.CRIMSON_FUNGUS,
-					 Items.WARPED_ROOTS,
-					 Items.CRIMSON_ROOTS,
-					 Items.WEEPING_VINES,
-					 Items.TWISTING_VINES);
+				.addTag(BlazingTags.Items.NETHER_FLORA.tag)
+				.add(net.minecraft.world.item.Items.WARPED_FUNGUS,
+                     net.minecraft.world.item.Items.CRIMSON_FUNGUS,
+                     net.minecraft.world.item.Items.WARPED_ROOTS,
+                     net.minecraft.world.item.Items.CRIMSON_ROOTS,
+                     net.minecraft.world.item.Items.WEEPING_VINES,
+                     net.minecraft.world.item.Items.TWISTING_VINES);
 
-		for (BlazingTags.ItemTags tag : BlazingTags.ItemTags.values()) {
+		for (BlazingTags.Items tag : BlazingTags.Items.values()) {
 			if (tag.alwaysDatagen) tagAppender(prov, tag);
 		}
 	}
 
-	public static TagsProvider.TagAppender<Item> tagAppender(RegistrateTagsProvider<Item> prov, BlazingTags.ItemTags tag) {
+	public static TagsProvider.TagAppender<Item> tagAppender(RegistrateTagsProvider<Item> prov, BlazingTags.Items tag) {
 		return tagAppender(prov, tag.tag);
 	}
 
-	public static TagsProvider.TagAppender<Block> tagAppender(RegistrateTagsProvider<Block> prov, BlazingTags.BlockTags tag) {
+	public static TagsProvider.TagAppender<Block> tagAppender(RegistrateTagsProvider<Block> prov, BlazingTags.Blocks tag) {
 		return tagAppender(prov, tag.tag);
 	}
 

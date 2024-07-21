@@ -1,5 +1,7 @@
 package com.dudko.blazinghot.content.block.modern_lamp;
 
+import net.minecraft.world.item.DyeColor;
+
 import org.jetbrains.annotations.NotNull;
 
 import com.simibubi.create.AllTags;
@@ -28,6 +30,10 @@ public class ModernLampBlock extends Block {
 	public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
 
 	public ModernLampBlock(Properties properties) {
+		this(properties, DyeColor.WHITE);
+	}
+
+	public ModernLampBlock(Properties properties, DyeColor color) {
 		super(properties);
 		registerDefaultState(defaultBlockState().setValue(LIT, false).setValue(LOCKED, false).setValue(POWERED, false));
 	}

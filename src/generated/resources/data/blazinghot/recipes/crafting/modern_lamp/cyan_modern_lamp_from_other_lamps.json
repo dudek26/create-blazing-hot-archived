@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "d": {
+      "tag": "c:cyan_dyes"
+    },
+    "l": {
+      "tag": "blazinghot:modern_lamps"
+    }
+  },
+  "pattern": [
+    "lll",
+    "ldl",
+    "lll"
+  ],
+  "result": {
+    "item": "blazinghot:cyan_modern_lamp"
+  },
+  "show_notification": true
+}
