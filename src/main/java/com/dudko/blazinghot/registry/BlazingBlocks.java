@@ -1,7 +1,6 @@
 package com.dudko.blazinghot.registry;
 
 import static com.dudko.blazinghot.BlazingHot.REGISTRATE;
-import static com.dudko.blazinghot.registry.BlazingItems.setupCreativeTab;
 
 import com.dudko.blazinghot.BlazingHot;
 import com.dudko.blazinghot.content.block.modern_lamp.ModernLampBlock;
@@ -45,17 +44,6 @@ public class BlazingBlocks {
 			.build()
 			.register();
 
-	public static final BlockEntry<ModernLampPanelBlock> WHITE_MODERN_LAMP_PANEL = REGISTRATE
-			.block("white_modern_lamp_panel", ModernLampPanelBlock::new)
-			.initialProperties(() -> net.minecraft.world.level.block.Blocks.GLOWSTONE)
-			.tag(AllTags.AllBlockTags.WRENCH_PICKUP.tag)
-			.properties(p -> p.lightLevel(s -> s.getValue(ModernLampBlock.LIT) ? 15 : 0))
-			.blockstate(new ModernLampPanelGenerator(DyeColor.WHITE)::generate)
-			.item()
-			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_lamp"))
-			.transform(ModelGen.customItemModel("modern_lamp_panel", "white"))
-			.register();
-
 	public static final DyedBlockList<ModernLampBlock> MODERN_LAMP_BLOCKS = new DyedBlockList<>(color -> {
 		String colorName = color.getSerializedName();
 		return REGISTRATE
@@ -86,6 +74,44 @@ public class BlazingBlocks {
 				.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_lamp"))
 				.model((c, b) -> b.blockItem(c).texture("#all", b.modLoc("block/modern_lamp/" + colorName)))
 				.build()
+				.register();
+	});
+
+	public static final DyedBlockList<ModernLampBlock> MODERN_LAMP_PANELS = new DyedBlockList<>(color -> {
+		String colorName = color.getSerializedName();
+		return REGISTRATE
+				.block(colorName + "_modern_lamp_panel", p -> new ModernLampPanelBlock(p, color))
+				.initialProperties(() -> net.minecraft.world.level.block.Blocks.GLOWSTONE)
+				.properties(p -> p.mapColor(color).lightLevel(s -> s.getValue(ModernLampPanelBlock.LIT) ? 15 : 0))
+				.tag(AllTags.AllBlockTags.WRENCH_PICKUP.tag, BlazingTags.Blocks.MODERN_LAMP_PANELS.tag)
+				.blockstate(new ModernLampPanelGenerator(color)::generate)
+				.recipe((c, p) -> {
+					ShapedRecipeBuilder
+							.shaped(RecipeCategory.REDSTONE, c.get())
+							.pattern("ll")
+							.define('l', MODERN_LAMP_BLOCKS.get(color))
+							.unlockedBy("has_lamp_panel", RegistrateRecipeProvider.has(BlazingTags.Items.MODERN_LAMP_PANELS.tag))
+							.save(p, BlazingHot.asResource("crafting/modern_lamp_panel/" + c.getName() + "_from_full_block"));
+					ShapedRecipeBuilder
+							.shaped(RecipeCategory.REDSTONE, c.get())
+							.pattern("lll")
+							.pattern("ldl")
+							.pattern("lll")
+							.define('l', BlazingTags.Items.MODERN_LAMP_PANELS.tag)
+							.define('d', DyeUtil.getDyeTag(color))
+							.unlockedBy("has_lamp_panel", RegistrateRecipeProvider.has(BlazingTags.Items.MODERN_LAMP_PANELS.tag))
+							.save(p, BlazingHot.asResource("crafting/modern_lamp_panel/" + c.getName() + "_from_other_lamps"));
+					ShapelessRecipeBuilder
+							.shapeless(RecipeCategory.REDSTONE, c.get())
+							.requires(BlazingTags.Items.MODERN_LAMP_PANELS.tag)
+							.requires(DyeUtil.getDyeTag(color))
+							.unlockedBy("has_lamp_panel", RegistrateRecipeProvider.has(BlazingTags.Items.MODERN_LAMP_PANELS.tag))
+							.save(p, BlazingHot.asResource("crafting/modern_lamp_panel/" + c.getName() + "_from_other_lamp"));
+				})
+				.item()
+				.tag(BlazingTags.Items.MODERN_LAMP_PANELS.tag)
+				.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.blazinghot.modern_lamp"))
+				.transform(ModelGen.customItemModel("modern_lamp_panel", colorName))
 				.register();
 	});
 

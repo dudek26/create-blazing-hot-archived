@@ -69,7 +69,8 @@ public class BlazingTags {
 
 	public enum Blocks {
 		BLAZE_GOLD_BLOCKS(COMMON),
-		MODERN_LAMPS;
+		MODERN_LAMPS,
+		MODERN_LAMP_PANELS;
 
 		public final TagKey<Block> tag;
 		public final boolean alwaysDatagen;
@@ -190,6 +191,7 @@ public class BlazingTags {
 		FOODS(COMMON),
 
 		MODERN_LAMPS,
+		MODERN_LAMP_PANELS,
 		NETHER_FLORA;
 
 		public final TagKey<Item> tag;
