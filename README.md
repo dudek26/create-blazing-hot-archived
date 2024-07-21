@@ -12,29 +12,29 @@ and existing metals, most notably their liquid forms.
 <details>
     <summary>Molten Metals</summary>
     <p>Create: Blazing Hot adds molten variants of metals to the game. Currently, only Gold and Blaze Gold have their liquid forms, but more will be added in the future.</p>
-    <p>There are new filling recipes using Molten Gold for Golden Carrots, Glistering Melons and Golden Apples.</p>
+    <p>There are new <b>filling recipes</b> using Molten Gold for <b>Golden Carrots, Glistering Melons and Golden Apples.</b></p>
     <p>Molten metals can also interact with Water:</p>
     <ul>
-        <li>Molten Gold turns into Cobblestone, but it's way faster than Lava.</li>
-        <li>Molten Blaze Gold turns into Netherrack.</li>
+        <li><b>Molten Gold</b> turns into Cobblestone, but it's way faster than Lava.</li>
+        <li><b>Molten Blaze</b> Gold turns into Netherrack.</li>
     </ul>
 </details>
 
 <details>
     <summary>Blaze Gold</summary>
-    <p>This new alloy is the main part of the mod. It is obtained by mixing Molten Gold and a new ingredient - <b>Nether Essence</b>. Blaze Gold is used in various recipes:</p>
+    <p>This new alloy is the main part of the mod. It is obtained by mixing <b>Molten Gold</b> and a new ingredient - <b>Nether Essence</b>. Blaze Gold is used in various recipes:</p>
     <ul>
-        <li>Crushing Blaze Gold Rods has a chance of dropping Blaze Powder, allowing for easy automation of it.</li>
-        <li>Blaze Gold Rods are also used in the crafting of Modern Lamps - a new block to light up your builds, and Blaze Arrows - a new type of arrow that deals extra damage when shot in The Nether dimension!</li>
-        <li>Either Blaze Gold Nuggets or Molten Blaze Gold can be used to craft Blaze Carrots, which stop the player from burning on being eaten.</li>
-        <li>Molten Blaze Gold can be used to craft new variants of Apples, that give longer Fire Resistance effect and are more damage-focused.</li>
+        <li>Crushing Blaze Gold Rods has a chance of dropping <b>Blaze Powder</b>, allowing for easy automation of it.</li>
+        <li>Blaze Gold Rods are also used in the crafting of <b>Modern Lamps</b> - a new block to light up your builds, and <b>Blaze Arrows</b> - a new type of arrow that deals extra damage when shot in The Nether dimension!</li>
+        <li>Either Blaze Gold Nuggets or <b>Molten Blaze Gold</b> can be used to craft <b>Blaze Carrots</b>, which stop the player from burning on being eaten.</li>
+        <li>Molten Blaze Gold can be used to craft <b>new variants of Apples</b>, that give longer Fire Resistance effect and Strength.</li>
     </ul>
     <p>More features for Blaze Gold are planned, such as Blaze Casings and some new machinery!</p>
 </details>
 
 <details>
     <summary>Nether Compound and Nether Essence</summary>
-    <p>Nether Compound can be obtained by mixing some Overworld and Nether materials together. It can be haunted into the Nether Essence. Currently, it's only used in the Blaze Gold recipe, but there is more content planned for these items.</p>
+    <p><b>Nether Compound</b> can be obtained by mixing some Overworld and Nether materials together. It can be haunted into the <b>Nether Essence</b>. Currently, it's only used in the Blaze Gold recipe, but there is more content planned for these items.</p>
 </details>
 
 <details>
