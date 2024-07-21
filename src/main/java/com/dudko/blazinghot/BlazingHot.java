@@ -2,6 +2,8 @@ package com.dudko.blazinghot;
 
 import com.dudko.blazinghot.data.BlazingLangGen;
 import com.dudko.blazinghot.data.BlazingTagGen;
+import com.dudko.blazinghot.data.recipe.BlazingCraftingRecipeGen;
+import com.dudko.blazinghot.data.recipe.BlazingSequencedAssemblyRecipeGen;
 import com.dudko.blazinghot.registry.*;
 import com.simibubi.create.Create;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -54,9 +56,12 @@ public class BlazingHot implements ModInitializer {
         return new ResourceLocation(ID, path);
     }
 
-    public static void gatherData(DataGenerator gen) {
+    public static void gatherData(DataGenerator.PackGenerator pack) {
         REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, BlazingTagGen::generateBlockTags);
         REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, BlazingTagGen::generateItemTags);
         REGISTRATE.addDataGenerator(ProviderType.LANG, BlazingLangGen::generate);
+        REGISTRATE.addDataGenerator(ProviderType.RECIPE, p -> new BlazingCraftingRecipeGen(p).generate());
+
+        pack.addProvider(BlazingSequencedAssemblyRecipeGen::new);
     }
 }

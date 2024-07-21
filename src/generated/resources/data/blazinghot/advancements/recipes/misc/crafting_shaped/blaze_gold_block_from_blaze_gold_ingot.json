@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_inventory_changed": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "blazinghot:blaze_gold_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "blazinghot:crafting_shaped/blaze_gold_block_from_blaze_gold_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_inventory_changed",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blazinghot:crafting_shaped/blaze_gold_block_from_blaze_gold_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

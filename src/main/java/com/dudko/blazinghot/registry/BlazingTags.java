@@ -13,6 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.FluidState;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Locale;
@@ -122,7 +123,7 @@ public class BlazingTags {
         MOLTEN_BLAZE_GOLD(COMMON),
         MOLTEN_GOLD(COMMON);
 
-        public final TagKey<Block> tag;
+        public final TagKey<Fluid> tag;
         public final boolean alwaysDatagen;
 
 
@@ -145,24 +146,20 @@ public class BlazingTags {
         Fluids(NameSpace namespace, String path, boolean optional, boolean alwaysDatagen) {
             ResourceLocation id = new ResourceLocation(namespace.id, path == null ? Lang.asId(name()) : path);
             if (optional) {
-                tag = optionalTag(BuiltInRegistries.BLOCK, id);
+                tag = optionalTag(BuiltInRegistries.FLUID, id);
             }
             else {
-                tag = TagKey.create(Registries.BLOCK, id);
+                tag = TagKey.create(Registries.FLUID, id);
             }
             this.alwaysDatagen = alwaysDatagen;
         }
 
         @SuppressWarnings("deprecation")
-        public boolean matches(Block block) {
-            return block.builtInRegistryHolder().is(tag);
+        public boolean matches(Fluid fluid) {
+            return fluid.builtInRegistryHolder().is(tag);
         }
 
-        public boolean matches(ItemStack stack) {
-            return stack != null && stack.getItem() instanceof BlockItem blockItem && matches(blockItem.getBlock());
-        }
-
-        public boolean matches(BlockState state) {
+        public boolean matches(FluidState state) {
             return state.is(tag);
         }
 

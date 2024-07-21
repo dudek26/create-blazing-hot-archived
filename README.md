@@ -26,7 +26,7 @@ and existing metals, most notably their liquid forms.
     <ul>
         <li>Crushing Blaze Gold Rods has a chance of dropping <b>Blaze Powder</b>, allowing for easy automation of it.</li>
         <li>Blaze Gold Rods are also used in the crafting of <b>Modern Lamps</b> - a new block to light up your builds, and <b>Blaze Arrows</b> - a new type of arrow that deals extra damage when shot in The Nether dimension!</li>
-        <li>Either Blaze Gold Nuggets or <b>Molten Blaze Gold</b> can be used to craft <b>Blaze Carrots</b>, which stop the player from burning on being eaten.</li>
+        <li>Either Blaze Gold Nuggets or Molten Blaze Gold can be used to craft <b>Blaze Carrots</b>, which stop the player from burning on being eaten.</li>
         <li>Molten Blaze Gold can be used to craft <b>new variants of Apples</b>, that give longer Fire Resistance effect and Strength.</li>
     </ul>
     <p>More features for Blaze Gold are planned, such as Blaze Casings and some new machinery!</p>
