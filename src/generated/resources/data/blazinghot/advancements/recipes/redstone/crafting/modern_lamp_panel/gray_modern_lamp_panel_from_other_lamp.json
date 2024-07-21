@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lamp_panel": {
+    "has_modern_lamp_panels": {
       "conditions": {
         "items": [
           {
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "has_lamp_panel",
+      "has_modern_lamp_panels",
       "has_the_recipe"
     ]
   ],

@@ -7,26 +7,26 @@ import net.minecraft.world.level.Level;
 
 public class ExtinguishingItem extends Item {
 
-	private final boolean foil;
+    private final boolean foil;
 
-	public ExtinguishingItem(Properties properties) {
-		this(properties, false);
-	}
+    public ExtinguishingItem(Properties properties) {
+        this(properties, false);
+    }
 
-	public ExtinguishingItem(Properties properties, boolean foil) {
-		super(properties);
-		this.foil = foil;
-	}
+    public ExtinguishingItem(Properties properties, boolean foil) {
+        super(properties);
+        this.foil = foil;
+    }
 
-	@Override
-	public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity livingEntity) {
-		livingEntity.extinguishFire();
-		return super.finishUsingItem(stack, level, livingEntity);
-	}
+    @Override
+    public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity livingEntity) {
+        livingEntity.extinguishFire();
+        return super.finishUsingItem(stack, level, livingEntity);
+    }
 
-	@Override
-	public boolean isFoil(ItemStack stack) {
-		if (!foil) return super.isFoil(stack);
-		return true;
-	}
+    @Override
+    public boolean isFoil(ItemStack stack) {
+        if (!foil) return super.isFoil(stack);
+        return true;
+    }
 }

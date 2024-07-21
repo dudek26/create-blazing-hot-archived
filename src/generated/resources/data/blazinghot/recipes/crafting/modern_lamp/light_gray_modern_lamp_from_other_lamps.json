@@ -2,19 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
+    "#": {
+      "tag": "blazinghot:modern_lamps"
+    },
     "d": {
       "tag": "c:light_gray_dyes"
-    },
-    "l": {
-      "tag": "blazinghot:modern_lamps"
     }
   },
   "pattern": [
-    "lll",
-    "ldl",
-    "lll"
+    "###",
+    "#d#",
+    "###"
   ],
   "result": {
+    "count": 8,
     "item": "blazinghot:light_gray_modern_lamp"
   },
   "show_notification": true
