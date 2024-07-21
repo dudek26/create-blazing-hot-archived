@@ -54,7 +54,7 @@ public class BlazingBlocks {
 				.blockstate(new ModernLampGenerator(color)::generate)
 				.recipe((c, p) -> {
 					ShapedRecipeBuilder
-							.shaped(RecipeCategory.REDSTONE, c.get(), 4)
+							.shaped(RecipeCategory.REDSTONE, c.get(), 8)
 							.pattern("lll")
 							.pattern("ldl")
 							.pattern("lll")
@@ -87,13 +87,13 @@ public class BlazingBlocks {
 				.blockstate(new ModernLampPanelGenerator(color)::generate)
 				.recipe((c, p) -> {
 					ShapedRecipeBuilder
-							.shaped(RecipeCategory.REDSTONE, c.get())
+							.shaped(RecipeCategory.REDSTONE, c.get(), 4)
 							.pattern("ll")
 							.define('l', MODERN_LAMP_BLOCKS.get(color))
 							.unlockedBy("has_lamp_panel", RegistrateRecipeProvider.has(BlazingTags.Items.MODERN_LAMP_PANELS.tag))
 							.save(p, BlazingHot.asResource("crafting/modern_lamp_panel/" + c.getName() + "_from_full_block"));
 					ShapedRecipeBuilder
-							.shaped(RecipeCategory.REDSTONE, c.get())
+							.shaped(RecipeCategory.REDSTONE, c.get(), 8)
 							.pattern("lll")
 							.pattern("ldl")
 							.pattern("lll")
