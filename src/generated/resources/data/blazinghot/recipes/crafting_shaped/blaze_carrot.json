@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "minecraft:carrot"
+    },
+    "Y": {
+      "tag": "c:blaze_gold_nuggets"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "result": {
+    "item": "blazinghot:blaze_carrot"
+  },
+  "show_notification": true
+}
