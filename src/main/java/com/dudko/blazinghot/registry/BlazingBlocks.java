@@ -54,7 +54,7 @@ public class BlazingBlocks {
 				.blockstate(new ModernLampGenerator(color)::generate)
 				.recipe((c, p) -> {
 					ShapedRecipeBuilder
-							.shaped(RecipeCategory.REDSTONE, c.get())
+							.shaped(RecipeCategory.REDSTONE, c.get(), 4)
 							.pattern("lll")
 							.pattern("ldl")
 							.pattern("lll")
