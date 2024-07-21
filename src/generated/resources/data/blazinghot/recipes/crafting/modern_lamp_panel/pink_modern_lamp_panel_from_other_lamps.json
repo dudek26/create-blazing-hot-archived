@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "d": {
+      "tag": "c:pink_dyes"
+    },
+    "l": {
+      "tag": "blazinghot:modern_lamp_panels"
+    }
+  },
+  "pattern": [
+    "lll",
+    "ldl",
+    "lll"
+  ],
+  "result": {
+    "item": "blazinghot:pink_modern_lamp_panel"
+  },
+  "show_notification": true
+}

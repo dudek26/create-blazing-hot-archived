@@ -2,11 +2,14 @@ package com.dudko.blazinghot.util;
 
 import java.util.Arrays;
 
+import com.dudko.blazinghot.registry.BlazingBlocks;
+
 import io.github.fabricators_of_create.porting_lib.tags.Tags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 
 public class DyeUtil {
 

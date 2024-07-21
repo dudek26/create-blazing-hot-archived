@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "l": {
+      "item": "blazinghot:white_modern_lamp"
+    }
+  },
+  "pattern": [
+    "ll"
+  ],
+  "result": {
+    "item": "blazinghot:white_modern_lamp_panel"
+  },
+  "show_notification": true
+}

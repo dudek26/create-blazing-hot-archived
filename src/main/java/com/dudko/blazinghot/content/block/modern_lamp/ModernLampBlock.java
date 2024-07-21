@@ -29,12 +29,11 @@ public class ModernLampBlock extends Block {
 	public static final BooleanProperty LOCKED = BooleanProperty.create("locked");
 	public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
 
-	public ModernLampBlock(Properties properties) {
-		this(properties, DyeColor.WHITE);
-	}
+	private final DyeColor color;
 
 	public ModernLampBlock(Properties properties, DyeColor color) {
 		super(properties);
+		this.color = color;
 		registerDefaultState(defaultBlockState().setValue(LIT, false).setValue(LOCKED, false).setValue(POWERED, false));
 	}
 
@@ -87,4 +86,7 @@ public class ModernLampBlock extends Block {
 		if (!pLevel.getBlockTicks().hasScheduledTick(pPos, this)) pLevel.scheduleTick(pPos, this, 1);
 	}
 
+	public DyeColor getColor() {
+		return color;
+	}
 }

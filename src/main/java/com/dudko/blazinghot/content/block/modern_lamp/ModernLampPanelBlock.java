@@ -1,5 +1,7 @@
 package com.dudko.blazinghot.content.block.modern_lamp;
 
+import net.minecraft.world.item.DyeColor;
+
 import org.jetbrains.annotations.NotNull;
 
 import com.dudko.blazinghot.content.block.Shapes;
@@ -22,8 +24,8 @@ public class ModernLampPanelBlock extends ModernLampBlock {
 
 	public static final DirectionProperty FACING = BlockStateProperties.FACING;
 
-	public ModernLampPanelBlock(Properties properties) {
-		super(properties);
+	public ModernLampPanelBlock(Properties properties, DyeColor color) {
+		super(properties, color);
 		defaultBlockState().setValue(FACING, Direction.UP);
 	}
 
