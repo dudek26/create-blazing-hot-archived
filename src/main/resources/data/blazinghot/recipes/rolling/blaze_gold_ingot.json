@@ -1,5 +1,5 @@
 {
-  "type":"createaddition:rolling",
+  "type": "createaddition:rolling",
   "input": {
     "tag": "c:blaze_gold_ingots"
   },

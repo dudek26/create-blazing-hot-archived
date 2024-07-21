@@ -3,6 +3,7 @@ package com.dudko.blazinghot;
 import com.dudko.blazinghot.data.BlazingLangGen;
 import com.dudko.blazinghot.data.BlazingTagGen;
 import com.dudko.blazinghot.data.recipe.BlazingCraftingRecipeGen;
+import com.dudko.blazinghot.data.recipe.BlazingProcessingRecipeGen;
 import com.dudko.blazinghot.data.recipe.BlazingSequencedAssemblyRecipeGen;
 import com.dudko.blazinghot.registry.*;
 import com.simibubi.create.Create;
@@ -14,7 +15,7 @@ import com.simibubi.create.foundation.item.TooltipModifier;
 import com.tterrag.registrate.providers.ProviderType;
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.data.DataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,12 +57,13 @@ public class BlazingHot implements ModInitializer {
         return new ResourceLocation(ID, path);
     }
 
-    public static void gatherData(DataGenerator.PackGenerator pack) {
+    public static void gatherData(FabricDataGenerator.Pack pack) {
         REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, BlazingTagGen::generateBlockTags);
         REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, BlazingTagGen::generateItemTags);
         REGISTRATE.addDataGenerator(ProviderType.LANG, BlazingLangGen::generate);
-        REGISTRATE.addDataGenerator(ProviderType.RECIPE, p -> new BlazingCraftingRecipeGen(p).generate());
 
         pack.addProvider(BlazingSequencedAssemblyRecipeGen::new);
+        pack.addProvider(BlazingCraftingRecipeGen::new);
+        pack.addProvider(BlazingProcessingRecipeGen::registerAll);
     }
 }

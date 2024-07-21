@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_inventory_changed": {
+    "has_item": {
       "conditions": {
         "items": [
           {
             "items": [
-              "blazinghot:blaze_gold_ingot"
+              "blazinghot:blaze_gold_rod"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blazinghot:crafting_shaped/blaze_gold_ingot_from_blaze_gold_nugget"
+        "recipe": "blazinghot:crafting/white_modern_lamp"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_inventory_changed",
+      "has_item",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "blazinghot:crafting_shaped/blaze_gold_ingot_from_blaze_gold_nugget"
+      "blazinghot:crafting/white_modern_lamp"
     ]
   },
   "sends_telemetry_event": false

@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
+  "category": "misc",
   "key": {
     "X": {
-      "tag": "c:blaze_gold_rods"
+      "item": "blazinghot:blaze_gold_rod"
     },
     "Y": {
       "item": "minecraft:glowstone"

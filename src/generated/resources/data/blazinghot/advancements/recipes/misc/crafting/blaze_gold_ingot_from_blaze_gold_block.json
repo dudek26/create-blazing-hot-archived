@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_inventory_changed": {
+    "has_item": {
       "conditions": {
         "items": [
           {
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blazinghot:crafting_shaped/blaze_carrot"
+        "recipe": "blazinghot:crafting/blaze_gold_ingot_from_blaze_gold_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_inventory_changed",
+      "has_item",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "blazinghot:crafting_shaped/blaze_carrot"
+      "blazinghot:crafting/blaze_gold_ingot_from_blaze_gold_block"
     ]
   },
   "sends_telemetry_event": false

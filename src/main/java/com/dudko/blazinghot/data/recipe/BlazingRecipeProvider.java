@@ -22,6 +22,11 @@ public abstract class BlazingRecipeProvider extends RecipeProvider {
         all.forEach(c -> c.register(finishedRecipeConsumer));
     }
 
+    protected GeneratedRecipe register(GeneratedRecipe recipe) {
+        all.add(recipe);
+        return recipe;
+    }
+
     @FunctionalInterface
     public interface GeneratedRecipe {
         void register(Consumer<FinishedRecipe> consumer);

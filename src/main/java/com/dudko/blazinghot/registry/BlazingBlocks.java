@@ -50,11 +50,12 @@ public class BlazingBlocks {
                 .recipe((c, p) -> {
                     DyeUtil
                             .dyeingMultiple(RecipeCategory.REDSTONE, BlazingTags.Items.MODERN_LAMPS.tag, c.get(), color)
-                            .save(p,
-                                  BlazingHot.asResource("crafting_shaped/modern_lamp/" + c.getName() + "_from_other_lamps"));
+                            .save(p, BlazingHot.asResource(
+                                    "crafting_shaped/modern_lamp/" + c.getName() + "_from_other_lamps"));
                     DyeUtil
                             .dyeingSingle(RecipeCategory.REDSTONE, BlazingTags.Items.MODERN_LAMPS.tag, c.get(), color)
-                            .save(p, BlazingHot.asResource("crafting_shapeless/modern_lamp/" + c.getName() + "_from_other_lamp"));
+                            .save(p, BlazingHot.asResource(
+                                    "crafting_shapeless/modern_lamp/" + c.getName() + "_from_other_lamp"));
                 })
                 .item()
                 .tag(BlazingTags.Items.MODERN_LAMPS.tag)
