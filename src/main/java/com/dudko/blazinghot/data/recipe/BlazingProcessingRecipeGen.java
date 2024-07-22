@@ -32,6 +32,28 @@ public abstract class BlazingProcessingRecipeGen extends BlazingRecipeProvider {
     protected static final long NUGGET = FluidConstants.NUGGET;
     protected static final long BOTTLE = FluidConstants.BOTTLE;
 
+    protected enum Forms {
+        INGOT(BlazingProcessingRecipeGen.INGOT, "ingots", 300),
+        NUGGET(BlazingProcessingRecipeGen.NUGGET, "nuggets", 40),
+        BLOCK(BlazingProcessingRecipeGen.BUCKET, "blocks", 2400),
+        SHEET(BlazingProcessingRecipeGen.INGOT, "plates", 300);
+
+        public final long amount;
+        public final String tagSuffix;
+        public final int meltingTime;
+
+        Forms(long amount, String tagSuffix, int meltingTime) {
+            this.amount = amount;
+            this.tagSuffix = tagSuffix;
+            this.meltingTime = meltingTime;
+        }
+
+        public String tag(String material) {
+            return material + "_" + tagSuffix;
+        }
+
+    }
+
     public BlazingProcessingRecipeGen(FabricDataOutput output) {
         super(output);
     }
