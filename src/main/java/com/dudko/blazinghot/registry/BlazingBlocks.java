@@ -33,7 +33,6 @@ public class BlazingBlocks {
             REGISTRATE
                     .block("blaze_gold_block", Block::new)
                     .initialProperties(() -> net.minecraft.world.level.block.Blocks.GOLD_BLOCK)
-                    .properties(p -> p.lightLevel(s -> 8))
                     .tag(BlockTags.MINEABLE_WITH_PICKAXE)
                     .tag(BlockTags.NEEDS_IRON_TOOL)
                     .tag(Tags.Blocks.STORAGE_BLOCKS)
