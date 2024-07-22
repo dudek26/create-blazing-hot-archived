@@ -5,6 +5,7 @@ import com.dudko.blazinghot.registry.BlazingItems;
 import com.dudko.blazinghot.registry.BlazingTags;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.AllRecipeTypes;
+import com.simibubi.create.content.processing.recipe.HeatCondition;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.tags.ItemTags;
@@ -50,7 +51,7 @@ public class BlazingMixingRecipeGen extends BlazingProcessingRecipeGen {
 
     private GeneratedRecipe melting(TagKey<Item> tag, Fluid result, long amount, int duration) {
         return create("melting/" + tag.location().getPath(),
-                      b -> b.require(tag).duration(duration).output(result, amount));
+                      b -> b.require(tag).duration(duration).output(result, amount).requiresHeat(HeatCondition.SUPERHEATED));
     }
 
     private List<GeneratedRecipe> meltingAll(String material, Fluid result) {
