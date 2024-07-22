@@ -39,7 +39,15 @@ public enum Foods {
                                   .effect(new MobEffectInstance(MobEffects.REGENERATION, 10 * 20, 1), 1)
                                   .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 8 * 60 * 20), 1)
                                   .effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 5 * 60 * 20), 1)
-                                  .build());
+                                  .build()),
+    IRON_CARROT(new FoodProperties.Builder().nutrition(6).saturationMod(0.9F).build()),
+    IRON_APPLE(new FoodProperties.Builder()
+                       .nutrition(4)
+                       .alwaysEat()
+                       .saturationMod(1.1F)
+                       .effect(new MobEffectInstance(MobEffects.ABSORPTION, 60 * 20), 1)
+                       .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 30 * 20), 1)
+                       .build());
 
     public final FoodProperties foodProperties;
 

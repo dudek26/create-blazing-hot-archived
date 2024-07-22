@@ -6,7 +6,6 @@ import com.dudko.blazinghot.content.block.modern_lamp.ModernLampGenerator;
 import com.dudko.blazinghot.content.block.modern_lamp.ModernLampPanelBlock;
 import com.dudko.blazinghot.content.block.modern_lamp.ModernLampPanelGenerator;
 import com.dudko.blazinghot.util.DyeUtil;
-import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.foundation.block.DyedBlockList;
@@ -28,28 +27,24 @@ import static com.dudko.blazinghot.BlazingHot.REGISTRATE;
 
 public class BlazingBlocks {
 
-    public static final BlockEntry<Block>
-            BLAZE_GOLD_BLOCK =
-            REGISTRATE
-                    .block("blaze_gold_block", Block::new)
-                    .initialProperties(() -> net.minecraft.world.level.block.Blocks.GOLD_BLOCK)
-                    .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                    .tag(BlockTags.NEEDS_IRON_TOOL)
-                    .tag(Tags.Blocks.STORAGE_BLOCKS)
-                    .tag(BlockTags.BEACON_BASE_BLOCKS)
-                    .tag(BlazingTags.Blocks.BLAZE_GOLD_BLOCKS.tag)
-                    .item()
-                    .tag(Tags.Items.STORAGE_BLOCKS)
-                    .build()
-                    .register();
+    public static final BlockEntry<Block> BLAZE_GOLD_BLOCK = REGISTRATE
+            .block("blaze_gold_block", Block::new)
+            .initialProperties(() -> net.minecraft.world.level.block.Blocks.GOLD_BLOCK)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_IRON_TOOL)
+            .tag(Tags.Blocks.STORAGE_BLOCKS)
+            .tag(BlockTags.BEACON_BASE_BLOCKS)
+            .tag(BlazingTags.Blocks.BLAZE_GOLD_BLOCKS.tag)
+            .item()
+            .tag(Tags.Items.STORAGE_BLOCKS)
+            .build()
+            .register();
 
-    public static final BlockEntry<CasingBlock>
-            BLAZE_CASING =
-            REGISTRATE
-                    .block("blaze_casing", CasingBlock::new)
-                    .transform(BuilderTransformers.casing(() -> BlazingSpriteShifts.BLAZE_CASING))
-                    .properties(p -> p.mapColor(MapColor.CRIMSON_NYLIUM).sound(SoundType.NETHER_WOOD))
-                    .register();
+    public static final BlockEntry<CasingBlock> BLAZE_CASING = REGISTRATE
+            .block("blaze_casing", CasingBlock::new)
+            .transform(BuilderTransformers.casing(() -> BlazingSpriteShifts.BLAZE_CASING))
+            .properties(p -> p.mapColor(MapColor.CRIMSON_NYLIUM).sound(SoundType.NETHER_WOOD))
+            .register();
 
     public static final DyedBlockList<ModernLampBlock> MODERN_LAMP_BLOCKS = new DyedBlockList<>(color -> {
         String colorName = color.getSerializedName();
@@ -112,6 +107,5 @@ public class BlazingBlocks {
     });
 
     public static void register() {
-
     }
 }
