@@ -6,8 +6,11 @@ import com.dudko.blazinghot.content.block.modern_lamp.ModernLampGenerator;
 import com.dudko.blazinghot.content.block.modern_lamp.ModernLampPanelBlock;
 import com.dudko.blazinghot.content.block.modern_lamp.ModernLampPanelGenerator;
 import com.dudko.blazinghot.util.DyeUtil;
+import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllTags;
+import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.foundation.block.DyedBlockList;
+import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.ModelGen;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
@@ -18,6 +21,8 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.MapColor;
 
 import static com.dudko.blazinghot.BlazingHot.REGISTRATE;
 
@@ -39,6 +44,14 @@ public class BlazingBlocks {
                     .build()
                     .register();
 
+    public static final BlockEntry<CasingBlock>
+            BLAZE_CASING =
+            REGISTRATE
+                    .block("blaze_casing", CasingBlock::new)
+                    .transform(BuilderTransformers.casing(() -> BlazingSpriteShifts.BLAZE_CASING))
+                    .properties(p -> p.mapColor(MapColor.CRIMSON_NYLIUM).sound(SoundType.NETHER_WOOD))
+                    .register();
+
     public static final DyedBlockList<ModernLampBlock> MODERN_LAMP_BLOCKS = new DyedBlockList<>(color -> {
         String colorName = color.getSerializedName();
         return REGISTRATE
@@ -50,12 +63,11 @@ public class BlazingBlocks {
                 .recipe((c, p) -> {
                     DyeUtil
                             .dyeingMultiple(RecipeCategory.REDSTONE, BlazingTags.Items.MODERN_LAMPS.tag, c.get(), color)
-                            .save(p, BlazingHot.asResource(
-                                    "crafting/modern_lamp/" + c.getName() + "_from_other_lamps"));
+                            .save(p,
+                                  BlazingHot.asResource("crafting/modern_lamp/" + c.getName() + "_from_other_lamps"));
                     DyeUtil
                             .dyeingSingle(RecipeCategory.REDSTONE, BlazingTags.Items.MODERN_LAMPS.tag, c.get(), color)
-                            .save(p, BlazingHot.asResource(
-                                    "crafting/modern_lamp/" + c.getName() + "_from_other_lamp"));
+                            .save(p, BlazingHot.asResource("crafting/modern_lamp/" + c.getName() + "_from_other_lamp"));
                 })
                 .item()
                 .tag(BlazingTags.Items.MODERN_LAMPS.tag)
