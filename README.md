@@ -1,5 +1,7 @@
 # [Create: Blazing Hot](https://modrinth.com/mod/create-blazing-hot)
 
+# Archived, go to [the new repo](https://github.com/dudek26/Create-Blazing-Hot).
+
 Nether- and metal-related features and QoL recipes.
 
 ## 📝 About
