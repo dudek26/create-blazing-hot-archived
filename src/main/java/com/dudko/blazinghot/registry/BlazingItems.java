@@ -132,7 +132,7 @@ public class BlazingItems {
             .register();
 
     public static final ItemEntry<Item> IRON_CARROT =
-            new FoodItemBuilder<>("iron_carrot", Item::new).nutrition(6).saturationMod(0.9f).register(), IRON_APPLE =
+            new FoodItemBuilder<>("iron_carrot", Item::new).nutrition(5).saturationMod(0.8f).register(), IRON_APPLE =
             new FoodItemBuilder<>("iron_apple", Item::new)
                     .rarity(Rarity.RARE)
                     .nutrition(4)
@@ -148,9 +148,9 @@ public class BlazingItems {
             .addEffect(MobEffects.DAMAGE_RESISTANCE, tickMinutes(2), 1)
             .register();
     public static final ItemEntry<SequencedAssemblyItem> HEAVY_STELLAR_IRON_APPLE =
-            sequencedIngredient("heavy_stellar_golden_apple", Rarity.RARE);
+            sequencedIngredient("heavy_stellar_iron_apple", Rarity.RARE);
     public static final ItemEntry<FoilableItem> ENCHANTED_IRON_APPLE =
-            new FoodItemBuilder<>("enchanted_iron_apple", p -> new FoilableItem(p, true))
+            new FoodItemBuilder<>("enchanted_iron_apple", FoilableItem::new)
                     .rarity(Rarity.EPIC)
                     .nutrition(4)
                     .saturationMod(1.1f)

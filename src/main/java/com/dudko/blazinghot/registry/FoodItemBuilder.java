@@ -37,9 +37,11 @@ public class FoodItemBuilder<T extends Item> {
     private final NonNullFunction<Item.Properties, T> factory;
     private TagKey<Item>[] tags;
 
+    @SuppressWarnings("unchecked")
     protected FoodItemBuilder(String name, NonNullFunction<Item.Properties, T> factory) {
         this.name = name;
         this.factory = factory;
+        this.tags = List.of(BlazingTags.Items.FOODS.tag).toArray(new TagKey[1]);
     }
 
     protected FoodItemBuilder<T> maxStackSize(int maxStackSize) {
@@ -48,7 +50,7 @@ public class FoodItemBuilder<T extends Item> {
     }
 
     @SafeVarargs
-    @SuppressWarnings("all")
+    @SuppressWarnings("unchecked")
     protected final FoodItemBuilder<T> tag(TagKey<Item>... tags) {
         List<TagKey<Item>> tagList = new ArrayList<>(Arrays.asList(tags));
         TagKey<Item>[] newTags = new TagKey[tagList.size()];

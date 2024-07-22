@@ -14,7 +14,7 @@ public class FoilableItem extends Item {
     }
 
     public FoilableItem(Properties properties) {
-        this(properties, false);
+        this(properties, true);
     }
 
     @Override
