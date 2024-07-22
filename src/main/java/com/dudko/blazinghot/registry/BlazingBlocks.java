@@ -51,11 +51,11 @@ public class BlazingBlocks {
                     DyeUtil
                             .dyeingMultiple(RecipeCategory.REDSTONE, BlazingTags.Items.MODERN_LAMPS.tag, c.get(), color)
                             .save(p, BlazingHot.asResource(
-                                    "crafting_shaped/modern_lamp/" + c.getName() + "_from_other_lamps"));
+                                    "crafting/modern_lamp/" + c.getName() + "_from_other_lamps"));
                     DyeUtil
                             .dyeingSingle(RecipeCategory.REDSTONE, BlazingTags.Items.MODERN_LAMPS.tag, c.get(), color)
                             .save(p, BlazingHot.asResource(
-                                    "crafting_shapeless/modern_lamp/" + c.getName() + "_from_other_lamp"));
+                                    "crafting/modern_lamp/" + c.getName() + "_from_other_lamp"));
                 })
                 .item()
                 .tag(BlazingTags.Items.MODERN_LAMPS.tag)
@@ -81,17 +81,17 @@ public class BlazingBlocks {
                             .unlockedBy("has_modern_lamps",
                                         RegistrateRecipeProvider.has(BlazingTags.Items.MODERN_LAMP_PANELS.tag))
                             .save(p, BlazingHot.asResource(
-                                    "crafting_shaped/modern_lamp_panel/" + c.getName() + "_from_full_block"));
+                                    "crafting/modern_lamp_panel/" + c.getName() + "_from_full_block"));
                     DyeUtil
                             .dyeingMultiple(RecipeCategory.REDSTONE, BlazingTags.Items.MODERN_LAMP_PANELS.tag, c.get(),
                                             color)
                             .save(p, BlazingHot.asResource(
-                                    "crafting_shaped/modern_lamp_panel/" + c.getName() + "_from_other_lamps"));
+                                    "crafting/modern_lamp_panel/" + c.getName() + "_from_other_lamps"));
                     DyeUtil
                             .dyeingSingle(RecipeCategory.REDSTONE, BlazingTags.Items.MODERN_LAMP_PANELS.tag, c.get(),
                                           color)
                             .save(p, BlazingHot.asResource(
-                                    "crafting_shapeless/modern_lamp_panel/" + c.getName() + "_from_other_lamp"));
+                                    "crafting/modern_lamp_panel/" + c.getName() + "_from_other_lamp"));
                 })
                 .item()
                 .tag(BlazingTags.Items.MODERN_LAMP_PANELS.tag)

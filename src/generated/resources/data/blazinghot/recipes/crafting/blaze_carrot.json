@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "X": {
-      "item": "minecraft:carrot"
+      "tag": "c:blaze_gold_nuggets"
     },
     "Y": {
-      "tag": "c:blaze_gold_nuggets"
+      "item": "minecraft:carrot"
     }
   },
   "pattern": [

@@ -2,6 +2,7 @@ package com.dudko.blazinghot.data.recipe;
 
 import com.dudko.blazinghot.BlazingHot;
 import com.dudko.blazinghot.registry.BlazingBlocks;
+import com.dudko.blazinghot.registry.BlazingItems;
 import com.simibubi.create.foundation.utility.RegisteredObjects;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -10,6 +11,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -34,26 +36,26 @@ public class BlazingCraftingRecipeGen extends BlazingRecipeProvider {
     }
 
 
-    private void compressing(ItemLike ingredient, ItemLike result, ItemLike unlockedBy) {
-        create(() -> result)
+    private GeneratedRecipe compressing(ItemLike ingredient, ItemLike result, ItemLike unlockedBy) {
+        return create(() -> result)
                 .unlockedBy(() -> unlockedBy)
                 .withSuffix("_from_" + ingredient.asItem())
                 .viaShaped(b -> b.define('X', ingredient).pattern("XXX").pattern("XXX").pattern("XXX"));
     }
 
-    private void decompressing(ItemLike ingredient, ItemLike result, int count, ItemLike unlockedBy) {
-        create(() -> result)
+    private GeneratedRecipe decompressing(ItemLike ingredient, ItemLike result, int count, ItemLike unlockedBy) {
+        return create(() -> result)
                 .returns(count)
                 .unlockedBy(() -> unlockedBy)
                 .withSuffix("_from_" + ingredient.asItem())
                 .viaShapeless(b -> b.requires(ingredient));
     }
 
-    private void covering(ItemLike ingredient, TagKey<Item> cover, ItemLike result, TagKey<Item> unlockedBy) {
-        create(() -> result)
+    private GeneratedRecipe covering(ItemLike ingredient, TagKey<Item> cover, ItemLike result, TagKey<Item> unlockedBy) {
+        return create(() -> result)
                 .unlockedByTag(() -> unlockedBy)
                 .viaShaped(
-                        b -> b.define('X', ingredient).define('Y', cover).pattern("XXX").pattern("XYX").pattern("XXX"));
+                        b -> b.define('Y', ingredient).define('X', cover).pattern("XXX").pattern("XYX").pattern("XXX"));
     }
 
     private void generate() {
@@ -75,7 +77,18 @@ public class BlazingCraftingRecipeGen extends BlazingRecipeProvider {
                             .define('Y', Blocks.GLOWSTONE)
                             .pattern(" X ")
                             .pattern("XYX")
-                            .pattern(" X "));
+                            .pattern(" X ")),
+            BLAZE_ARROW =
+                    create(BlazingItems.BLAZE_ARROW)
+                            .unlockedBy(BLAZE_GOLD_ROD)
+                            .returns(2)
+                            .viaShaped(b -> b
+                                    .define('X', ItemTags.COALS)
+                                    .define('Y', BLAZE_GOLD_ROD)
+                                    .define('Z', Items.FEATHER)
+                                    .pattern(" X ")
+                                    .pattern(" Y ")
+                                    .pattern(" Z "));
 
     GeneratedRecipeBuilder create(Supplier<ItemLike> result) {
         return new GeneratedRecipeBuilder("/", result);

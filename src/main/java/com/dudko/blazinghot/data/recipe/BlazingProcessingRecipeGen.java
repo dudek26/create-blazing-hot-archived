@@ -4,7 +4,6 @@ import com.dudko.blazinghot.BlazingHot;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipe;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
-import com.simibubi.create.foundation.data.recipe.ProcessingRecipeGen;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import com.simibubi.create.foundation.utility.RegisteredObjects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -28,6 +27,8 @@ public abstract class BlazingProcessingRecipeGen extends BlazingRecipeProvider {
     protected static final List<BlazingProcessingRecipeGen> GENERATORS = new ArrayList<>();
     protected static final long BUCKET = FluidConstants.BUCKET;
     protected static final long INGOT = FluidConstants.INGOT;
+    protected static final long INGOT_COVER = FluidConstants.INGOT * 8;
+    protected static final long NUGGET_COVER = FluidConstants.NUGGET * 8;
     protected static final long NUGGET = FluidConstants.NUGGET;
     protected static final long BOTTLE = FluidConstants.BOTTLE;
 
@@ -38,6 +39,13 @@ public abstract class BlazingProcessingRecipeGen extends BlazingRecipeProvider {
     public static DataProvider registerAll(FabricDataOutput output) {
         GENERATORS.add(new BlazingPressingRecipeGen(output));
         GENERATORS.add(new BlazingCompactingRecipeGen(output));
+        GENERATORS.add(new BlazingCrushingRecipeGen(output));
+        GENERATORS.add(new BlazingCuttingRecipeGen(output));
+        GENERATORS.add(new BlazingDeployingRecipeGen(output));
+        GENERATORS.add(new BlazingMillingRecipeGen(output));
+        GENERATORS.add(new BlazingMixingRecipeGen(output));
+        GENERATORS.add(new BlazingFillingRecipeGen(output));
+        GENERATORS.add(new BlazingHauntingRecipeGen(output));
 
         return new DataProvider() {
 
